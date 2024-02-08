@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://cffv6djcnliar"]
+
+[ext_resource type="Script" path="res://resources/weapons/weapon.gd" id="1_2onuj"]
+
+[resource]
+script = ExtResource("1_2onuj")
+id = 1
+name = "Sword"
+description = "The classic melee weapon."
+rate = 1.0
+accuracy = 1.0
+min_range = 3.0
+max_range = 5.0
+speed = 3.0
+damage = 10.0

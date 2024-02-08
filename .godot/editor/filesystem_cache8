@@ -1,3 +1,30 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1706938449
+::res://::1707408936
 icon.svg::CompressedTexture2D::1066657180085560519::1706938445::1706938450::1::::<><>::
+README.md::TextFile::-1::1706939911::0::1::::<><>::
+::res://extras/::1707234623
+cursor.png::CompressedTexture2D::8497907543991547533::1707234620::1707234622::1::::<><>::
+::res://resources/::1707239737
+::res://resources/effects/::1707326185
+drop_shadow.gdshader::Shader::-1::1707326185::0::1::::<><>::
+::res://resources/environment/::1707315016
+arena_tileset.png::CompressedTexture2D::4364398593376855372::1707228079::1707228094::1::::<><>::
+arena_tileset.tres::TileSet::8616353700050589172::1707315016::0::1::::<><>::uid://b3gfaikpkxk4s::::res://resources/environment/arena_tileset.png<>uid://bct5enkist21r::::res://resources/environment/border.png
+border.png::CompressedTexture2D::2567850899894827433::1707228898::1707228899::1::::<><>::
+::res://resources/weapons/::1707324531
+weapon.gd::GDScript::-1::1707324531::0::1::::Weapon<>Resource<>::
+weapon_sword.tres::Resource/Weapon::5135438062387785433::1707324460::0::1::::<><>::res://resources/weapons/weapon.gd
+::res://scenes/::1707231708
+::res://scenes/autoloads/::1707231681
+game_manager.gd::GDScript::-1::1706960742::0::1::::<>Node<>::
+game_manager.tscn::PackedScene::7167473132343784043::1707231681::0::1::::<><>::res://scenes/autoloads/game_manager.gd
+::res://scenes/game/::1707324045
+game.tscn::PackedScene::6824488108380764193::1707324045::0::1::::<><>::uid://du03c7c0a44wm::::res://resources/environment/arena_tileset.tres<>uid://cism8jn13n1q3::::res://scenes/game objects/player/player.tscn<>res://resources/effects/drop_shadow.gdshader
+::res://scenes/game objects/::1707239667
+::res://scenes/game objects/player/::1707324495
+aim_indicator.png::CompressedTexture2D::5315281349495111252::1706966497::1706966499::1::::<><>::
+player.gd::GDScript::-1::1707315031::0::1::::<>CharacterBody2D<>::
+player.png::CompressedTexture2D::358716138366714004::1706954319::1706954320::1::::<><>::
+player.tscn::PackedScene::5372298945187485004::1707324495::0::1::::<><>::uid://fd1ac06ukn6s::::res://scenes/game objects/player/player.png<>res://scenes/game objects/player/player.gd<>uid://chy0531x83fk3::::res://scenes/game objects/player/aim_indicator.png<>uid://dvqehbyjo6cpv::::res://scenes/game objects/weapons/weapon.tscn
+::res://scenes/game objects/weapons/::1707324530
+weapon.tscn::PackedScene::8666513270098844691::1707324530::0::1::::<><>::

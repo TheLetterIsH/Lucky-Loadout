@@ -1,0 +1,13 @@
+Marker2D
+Camera2D
+TileMap
+ColorRect
+CanvasLayer
+Sprite2D
+PhantomCamera2D
+PhantomCameraHost
+SubViewport
+Node2D
+Node
+CollisionShape2D
+CharacterBody2D
