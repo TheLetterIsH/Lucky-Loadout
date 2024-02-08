@@ -15,10 +15,10 @@ script = ExtResource("1_ixtxv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 process_callback = 0
-limit_left = -32
-limit_top = -32
-limit_right = 992
-limit_bottom = 992
+limit_left = 0
+limit_top = 0
+limit_right = 960
+limit_bottom = 960
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
 drag_horizontal_enabled = true

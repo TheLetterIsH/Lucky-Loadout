@@ -2,7 +2,4 @@ res://scenes/game/game.tscn
 res://resources/environment/arena_tileset.tres
 res://resources/effects/drop_shadow.gdshader
 res://scenes/game objects/player/player.tscn
-res://scenes/game objects/player/player.gd
-res://resources/weapons/weapon.gd
 res://scenes/game objects/weapons/weapon.tscn
-res://resources/weapons/weapon_sword.tres
