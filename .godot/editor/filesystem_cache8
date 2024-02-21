@@ -1,30 +1,46 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1707408936
+::res://::1708516875
 icon.svg::CompressedTexture2D::1066657180085560519::1706938445::1706938450::1::::<><>::
-README.md::TextFile::-1::1706939911::0::1::::<><>::
-::res://extras/::1707234623
-cursor.png::CompressedTexture2D::8497907543991547533::1707234620::1707234622::1::::<><>::
-::res://resources/::1707239737
-::res://resources/effects/::1707326185
-drop_shadow.gdshader::Shader::-1::1707326185::0::1::::<><>::
-::res://resources/environment/::1707315016
+README.md::TextFile::-1::1707412355::0::1::::<><>::
+::res://extras/::1708537155
+cursor.png::CompressedTexture2D::8497907543991547533::1708537174::1708537176::1::::<><>::
+::res://resources/::1708531022
+::res://resources/effects/::1708537156
+drop_shadow.gdshader::Shader::-1::1708537156::0::1::::<><>::
+::res://resources/environment/::1708515572
 arena_tileset.png::CompressedTexture2D::4364398593376855372::1707228079::1707228094::1::::<><>::
-arena_tileset.tres::TileSet::8616353700050589172::1707315016::0::1::::<><>::uid://b3gfaikpkxk4s::::res://resources/environment/arena_tileset.png<>uid://bct5enkist21r::::res://resources/environment/border.png
+arena_tileset.tres::TileSet::8616353700050589172::1708515572::0::1::::<><>::uid://b3gfaikpkxk4s::::res://resources/environment/arena_tileset.png<>uid://bct5enkist21r::::res://resources/environment/border.png
 border.png::CompressedTexture2D::2567850899894827433::1707228898::1707228899::1::::<><>::
-::res://resources/weapons/::1707324531
-weapon.gd::GDScript::-1::1707324531::0::1::::Weapon<>Resource<>::
-weapon_sword.tres::Resource/Weapon::5135438062387785433::1707324460::0::1::::<><>::res://resources/weapons/weapon.gd
-::res://scenes/::1707231708
-::res://scenes/autoloads/::1707231681
-game_manager.gd::GDScript::-1::1706960742::0::1::::<>Node<>::
+::res://resources/projectile resources/::1708534949
+projectile_resource.gd::GDScript::-1::1708534949::0::1::::ProjectileResource<>Resource<>::
+::res://resources/weapon resources/::1708530714
+weapon_resource.gd::GDScript::-1::1708530714::0::1::::WeaponResource<>Resource<>::
+::res://resources/weapons/::1708529490
+weapon_none.tres::Resource/WeaponResource::8666639381679906201::1708529490::0::1::::<><>::res://resources/weapon resources/weapon_resource.gd
+::res://scenes/::1708231566
+::res://scenes/autoloads/::1708537156
+game_events.gd::GDScript::-1::1708517106::0::1::::<>Node<>::
+game_events.tscn::PackedScene::3122155950346098200::1708537156::0::1::::<><>::res://scenes/autoloads/game_events.gd
+game_manager.gd::GDScript::-1::1708521060::0::1::::<>Node<>::
 game_manager.tscn::PackedScene::7167473132343784043::1707231681::0::1::::<><>::res://scenes/autoloads/game_manager.gd
-::res://scenes/game/::1707324045
-game.tscn::PackedScene::6824488108380764193::1707324045::0::1::::<><>::uid://du03c7c0a44wm::::res://resources/environment/arena_tileset.tres<>uid://cism8jn13n1q3::::res://scenes/game objects/player/player.tscn<>res://resources/effects/drop_shadow.gdshader
-::res://scenes/game objects/::1707239667
-::res://scenes/game objects/player/::1707324495
+loadout_manager.gd::GDScript::-1::1708264300::0::1::::<>Node<>::
+loadout_manager.tscn::PackedScene::705291524130456097::1708537156::0::1::::<><>::res://scenes/autoloads/loadout_manager.gd
+::res://scenes/game/::1708537156
+game.tscn::PackedScene::6824488108380764193::1708537156::0::1::::<><>::uid://du03c7c0a44wm::::res://resources/environment/arena_tileset.tres<>uid://cism8jn13n1q3::::res://scenes/game objects/player/player.tscn<>res://resources/effects/drop_shadow.gdshader
+::res://scenes/game objects/::1708241472
+::res://scenes/game objects/player/::1708537156
 aim_indicator.png::CompressedTexture2D::5315281349495111252::1706966497::1706966499::1::::<><>::
-player.gd::GDScript::-1::1707315031::0::1::::<>CharacterBody2D<>::
+player.gd::GDScript::-1::1708234104::0::1::::<>CharacterBody2D<>::
 player.png::CompressedTexture2D::358716138366714004::1706954319::1706954320::1::::<><>::
-player.tscn::PackedScene::5372298945187485004::1707324495::0::1::::<><>::uid://fd1ac06ukn6s::::res://scenes/game objects/player/player.png<>res://scenes/game objects/player/player.gd<>uid://chy0531x83fk3::::res://scenes/game objects/player/aim_indicator.png<>uid://dvqehbyjo6cpv::::res://scenes/game objects/weapons/weapon.tscn
-::res://scenes/game objects/weapons/::1707324530
-weapon.tscn::PackedScene::8666513270098844691::1707324530::0::1::::<><>::
+player.tscn::PackedScene::5372298945187485004::1708537156::0::1::::<><>::uid://fd1ac06ukn6s::::res://scenes/game objects/player/player.png<>res://scenes/game objects/player/player.gd<>uid://chy0531x83fk3::::res://scenes/game objects/player/aim_indicator.png<>uid://pirjhna343g0::::res://scenes/game objects/weapons/weapon.tscn
+::res://scenes/game objects/projectiles/::1708531003
+::res://scenes/game objects/projectiles/projectile basic melee/::1708537156
+projectile_basic_melee.png::CompressedTexture2D::3219360175801320762::1708266986::1708267055::1::::<><>::
+projectile_basic_melee.tscn::PackedScene::3175471446212265415::1708537156::0::1::::<><>::uid://bl4qnk38wh4xa::::res://scenes/game objects/projectiles/projectile basic melee/projectile_basic_melee.png<>res://scenes/game objects/projectiles/projectile basic melee/projectile_basic_melee.gd<>res://resources/projectile resources/projectile_resource.gd
+projectile_basic_melee.gd::GDScript::-1::1708534956::0::1::::<>Node2D<>::
+::res://scenes/game objects/projectiles/projectile small melee/::1708267055
+projectile_small_melee.png::CompressedTexture2D::4990211361850665479::1708267050::1708267055::1::::<><>::
+::res://scenes/game objects/weapons/::1708537156
+weapon.gd::GDScript::-1::1708536857::0::1::::Weapon<>Node2D<>::
+weapon.tscn::PackedScene::1070396325409636157::1708537156::0::1::::<><>::res://scenes/game objects/weapons/weapon.gd
+::res://scenes/managers/::1708264374

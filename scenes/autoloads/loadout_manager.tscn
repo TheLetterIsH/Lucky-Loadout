@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://kbwbv5wuncqr"]
+
+[ext_resource type="Script" path="res://scenes/autoloads/loadout_manager.gd" id="1_jiscf"]
+
+[node name="LoadoutManager" type="Node"]
+script = ExtResource("1_jiscf")

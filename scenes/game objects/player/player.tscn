@@ -3,15 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://fd1ac06ukn6s" path="res://scenes/game objects/player/player.png" id="1_bpesu"]
 [ext_resource type="Script" path="res://scenes/game objects/player/player.gd" id="1_ixtxv"]
 [ext_resource type="Texture2D" uid="uid://chy0531x83fk3" path="res://scenes/game objects/player/aim_indicator.png" id="3_pa1a3"]
-[ext_resource type="PackedScene" uid="uid://dvqehbyjo6cpv" path="res://scenes/game objects/weapons/weapon.tscn" id="4_2niw7"]
+[ext_resource type="PackedScene" uid="uid://pirjhna343g0" path="res://scenes/game objects/weapons/weapon.tscn" id="5_bf72o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w48ig"]
-radius = 11.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 0
 motion_mode = 1
 script = ExtResource("1_ixtxv")
+
+[node name="Weapon" parent="." groups=["weapon"] instance=ExtResource("5_bf72o")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 process_callback = 0
@@ -20,7 +21,7 @@ limit_top = 0
 limit_right = 960
 limit_bottom = 960
 position_smoothing_enabled = true
-position_smoothing_speed = 2.0
+position_smoothing_speed = 6.0
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_left_margin = 0.1
@@ -32,12 +33,11 @@ drag_bottom_margin = 0.1
 texture = ExtResource("1_bpesu")
 
 [node name="Pivot" type="Node2D" parent="."]
+unique_name_in_owner = true
 
 [node name="AimIndicator" type="Sprite2D" parent="Pivot"]
 texture = ExtResource("3_pa1a3")
 offset = Vector2(18, 0)
-
-[node name="Weapon" parent="Pivot" instance=ExtResource("4_2niw7")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_w48ig")

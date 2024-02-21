@@ -1,3 +1,7 @@
+# Script: Player
+# Job:
+# - Handles the movement of the player character in the game.
+
 extends CharacterBody2D
 
 @export_category("Player")

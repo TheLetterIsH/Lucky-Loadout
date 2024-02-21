@@ -1,2 +1,2 @@
-Weapon
+WeaponResource
 Resource

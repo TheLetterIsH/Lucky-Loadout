@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://dvqgjw1h34apt"]
+
+[ext_resource type="Script" path="res://resources/weapon resources/weapon_resource.gd" id="1_y4xxj"]
+
+[resource]
+script = ExtResource("1_y4xxj")
+id = 0
+identifier = "weapon_none"
+name = "None"
+type = ""
+description = "No weapon. Just these hands."
+cost = 0
+projectile_rate = 2.0
+projectile_accuracy_variation = 5.0
+projectile_range = 256.0
+projectile_range_variation = 3.0
+projectile_speed = 0.0
+projectile_min_damage = 0.0
+projectile_max_damage = 0.0
+projectile_mode = ""
+projectile_is_multishot = false
+projectile_spread = 0.0
+projectile_number_of_shots = 0
+aoe_range = 0.0

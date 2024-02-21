@@ -1,9 +1,13 @@
+res://scenes/game objects/projectiles
+res://scenes/autoloads
+res://scenes/game objects/projectiles/projectile basic melee
 res://resources/weapons
 res://scenes/game objects/weapons
+res://scenes/managers
+res://resources/weapon resources
 res://extras
 res://resources/environment
 res://scenes
 res://resources/effects
-res://scenes/autoloads
 res://scenes/game objects/player
 res://scenes/game
