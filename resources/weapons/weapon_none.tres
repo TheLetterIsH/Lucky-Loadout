@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://dvqgjw1h34apt"]
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=3 format=3 uid="uid://dvqgjw1h34apt"]
 
+[ext_resource type="PackedScene" uid="uid://38iw8viprb6s" path="res://scenes/game objects/projectiles/projectile basic melee/projectile_basic_melee.tscn" id="1_elgir"]
 [ext_resource type="Script" path="res://resources/weapon resources/weapon_resource.gd" id="1_y4xxj"]
 
 [resource]
@@ -10,11 +11,12 @@ name = "None"
 type = ""
 description = "No weapon. Just these hands."
 cost = 0
-projectile_rate = 2.0
+projectile_scene = ExtResource("1_elgir")
+projectile_rate = 6.0
 projectile_accuracy_variation = 5.0
-projectile_range = 256.0
-projectile_range_variation = 3.0
-projectile_speed = 0.0
+projectile_range = 8.0
+projectile_range_variation = 1.0
+projectile_speed = 5.0
 projectile_min_damage = 0.0
 projectile_max_damage = 0.0
 projectile_mode = ""

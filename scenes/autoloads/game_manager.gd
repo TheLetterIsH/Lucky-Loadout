@@ -11,3 +11,8 @@ func _process(delta):
 func get_player():
 	print_rich("getting [color=green]player[/color] from scene: [color=orange]" + get_tree().current_scene.to_string() + "[/color]")
 	return get_tree().get_first_node_in_group("player")
+
+
+func get_entity_container():
+	print_rich("getting [color=green]entity container[/color] from scene: [color=orange]" + get_tree().current_scene.to_string() + "[/color]")
+	return get_tree().get_first_node_in_group("entity_container")

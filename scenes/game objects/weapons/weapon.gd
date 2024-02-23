@@ -10,7 +10,7 @@ class_name Weapon
 @export var current_weapon: WeaponResource
 @export var can_use_primary_action: bool
 
-var last_time_recorded: int
+var entity_container: Node2D
 
 @onready var timer = $Timer
 
@@ -18,8 +18,12 @@ var last_time_recorded: int
 func _ready():
 	print("ready")
 	# Connecting signals
-	GameEvents.primary_action_pressed.connect(on_primary_action_pressed)
+	GameEvents.primary_action_used.connect(on_primary_action_used)
 	timer.timeout.connect(on_timer_timeout)
+	
+	# Get variables
+	entity_container = GameManager.get_entity_container()
+	
 	# Debug -----------
 	current_weapon = preload("res://resources/weapons/weapon_none.tres")
 	# -----------------
@@ -29,36 +33,44 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_pressed("primary_action"):
-		GameEvents.fire_primary_action_pressed()
+		# FOR PROJECTILE
+		# Check if can shoot and then shoot
+		if can_use_primary_action:
+			GameEvents.fire_primary_action_used()
+			can_use_primary_action = false
+			timer.start()
+		# END
 
 
-func on_primary_action_pressed():
+func on_primary_action_used():
 	# FOR PROJECTILE
-	# Check if can shoot and then shoot
-	if can_use_primary_action:
-		can_use_primary_action = false
-		timer.start()
-		
-		# Calculate the shoot direction
-		var mouse_current_position: Vector2 = get_global_mouse_position()
-		var weapon_current_position: Vector2 = self.global_position
-		var shoot_direction: Vector2 = weapon_current_position.direction_to(mouse_current_position)
-		
-		# Apply accuracy variation
-		var accuracy_variation_radians = deg_to_rad(current_weapon.projectile_accuracy_variation)
-		var random_accuracy_variation = randf_range(-accuracy_variation_radians, accuracy_variation_radians)
-		shoot_direction = shoot_direction.rotated(random_accuracy_variation)
-		
-		# Calculate the range of the projectile
-		var projectile_range = current_weapon.projectile_range + randf_range(-current_weapon.projectile_range_variation, current_weapon.projectile_range_variation)
-		
-		# Spawn a projectile with it's: origin position, direction, and a range
-		spawn_projectile(weapon_current_position, shoot_direction, projectile_range, current_weapon.projectile_speed)
+	
+	# Calculate the shoot direction
+	var mouse_current_position: Vector2 = get_global_mouse_position()
+	var weapon_current_position: Vector2 = self.global_position
+	var shoot_direction: Vector2 = weapon_current_position.direction_to(mouse_current_position)
+	
+	# Apply accuracy variation
+	var accuracy_variation_radians = deg_to_rad(current_weapon.projectile_accuracy_variation)
+	var random_accuracy_variation = randf_range(-accuracy_variation_radians, accuracy_variation_radians)
+	shoot_direction = shoot_direction.rotated(random_accuracy_variation)
+	
+	# Calculate the range of the projectile
+	var projectile_range = current_weapon.projectile_range + randf_range(-current_weapon.projectile_range_variation, current_weapon.projectile_range_variation)
+	projectile_range *= 32
+	
+	# Calculate the destination of the projectile based on the range
+	var projectile_destination = weapon_current_position + shoot_direction * projectile_range
+	
+	# Spawn a projectile with initial position, destination position, direction, range and speed
+	var projectile_instance: ProjectileBase = current_weapon.projectile_scene.instantiate() as ProjectileBase
+	projectile_instance.position = weapon_current_position
+	projectile_instance.destination_position = projectile_destination
+	projectile_instance.movement_direction = shoot_direction
+	projectile_instance.speed = current_weapon.projectile_speed
+	entity_container.add_child(projectile_instance)
+	
 	# END
-
-
-func spawn_projectile(position: Vector2, direction: Vector2, range: float, speed: float):
-	pass
 
 
 func on_timer_timeout():
