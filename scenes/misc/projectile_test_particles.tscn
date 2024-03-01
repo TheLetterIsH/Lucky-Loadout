@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://wrho11xci11r"]
+
+[ext_resource type="Texture2D" uid="uid://dikmqvt1j58fg" path="res://scenes/game objects/projectiles/projectile basic melee/projectile_test_particle.png" id="1_oym0u"]
+
+[sub_resource type="Curve" id="Curve_mj6sk"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_l0l6q"]
+curve = SubResource("Curve_mj6sk")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2asth"]
+particle_flag_disable_z = true
+angle_min = -720.0
+angle_max = 683.2
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 60.0
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_l0l6q")
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+emitting = false
+amount = 4
+process_material = SubResource("ParticleProcessMaterial_2asth")
+texture = ExtResource("1_oym0u")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0

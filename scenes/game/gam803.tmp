@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4h3k7k3g6pef"]
+[gd_scene load_steps=5 format=3 uid="uid://c4h3k7k3g6pef"]
 
 [ext_resource type="TileSet" uid="uid://du03c7c0a44wm" path="res://resources/environment/arena_tileset.tres" id="1_0jy5m"]
 [ext_resource type="PackedScene" uid="uid://cism8jn13n1q3" path="res://scenes/game objects/player/player.tscn" id="2_6fhcm"]
-[ext_resource type="Script" path="res://scenes/misc/fps_label.gd" id="4_m7rjd"]
 [ext_resource type="Shader" path="res://resources/effects/drop_shadow.gdshader" id="6_2lnms"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2p8ua"]
@@ -34,12 +33,3 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="FPSLabel" type="RichTextLabel" parent="UI"]
-offset_right = 122.0
-offset_bottom = 31.0
-bbcode_enabled = true
-text = "FPS: "
-script = ExtResource("4_m7rjd")

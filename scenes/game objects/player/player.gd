@@ -3,12 +3,15 @@
 # - Handles the movement of the player character in the game.
 
 extends CharacterBody2D
+class_name Player
 
 @export_category("Player")
 @export_group("Movement")
 @export var speed = 250
 @export var friction = 0.15
 @export var acceleration = 0.15
+
+var deadzone = 0.2
 
 @onready var pivot = $Pivot
 
@@ -35,10 +38,17 @@ func player_movement():
 
 
 func player_aim():
-	var global_mouse_position = get_global_mouse_position()
-	pivot.look_at(global_mouse_position) # Aim indicator towards mouse position
+	pivot.rotation = get_aim_direction_normalized().angle() # Aim indicator towards mouse position
 
 
 func get_movement_direction_normalized():
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	return direction.normalized()
+
+
+func get_aim_direction_normalized():
+	var global_mouse_position = get_global_mouse_position()
+	var aim_direction: Vector2 = self.global_position.direction_to(global_mouse_position)
+	#aim_direction = Input.get_vector("aim_left", "aim_right", "aim_up", "aim_down")
+	
+	return aim_direction.normalized()

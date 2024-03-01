@@ -1,10 +1,11 @@
 res://scenes/autoloads/game_events.tscn
-res://resources/weapons/weapon_none.tres
 res://resources/environment/arena_tileset.tres
+res://resources/weapons/weapon_none.tres
 res://resources/effects/drop_shadow.gdshader
 res://scenes/game/game.tscn
 res://scenes/game objects/player/player.tscn
 res://scenes/autoloads/loadout_manager.tscn
 res://scenes/game objects/weapons/weapon.tscn
-res://scenes/game objects/projectiles/projectile_base.tscn
 res://scenes/game objects/projectiles/projectile basic melee/projectile_basic_melee.tscn
+res://scenes/game objects/projectiles/projectile_base.gd
+res://scenes/game objects/weapons/weapon.gd

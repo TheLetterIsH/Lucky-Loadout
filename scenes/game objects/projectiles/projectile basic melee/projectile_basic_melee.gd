@@ -1,5 +1,7 @@
 extends ProjectileBase
 
+@export var projectile_test_particles: PackedScene
+
 
 func _ready():
 	super._ready()
@@ -12,4 +14,8 @@ func _physics_process(delta):
 	
 	global_position = global_position.lerp(destination_position, speed * delta)
 	if (global_position.distance_squared_to(destination_position) <= 1):
+		var particles_instance = projectile_test_particles.instantiate()
+		particles_instance.position = self.global_position
+		particles_instance.emitting = true
+		self.add_sibling(particles_instance)
 		queue_free()

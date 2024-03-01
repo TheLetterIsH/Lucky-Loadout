@@ -1,3 +1,6 @@
+GPUParticles2D
+RichTextLabel
+CanvasLayer
 Node2D
 CharacterBody2D
 RigidBody2D
@@ -10,5 +13,3 @@ Marker2D
 Camera2D
 TileMap
 ColorRect
-CanvasLayer
-PhantomCamera2D
