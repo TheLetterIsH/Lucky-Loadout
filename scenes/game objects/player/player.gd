@@ -11,7 +11,8 @@ class_name Player
 @export var friction = 0.15
 @export var acceleration = 0.15
 
-var deadzone = 0.2
+enum INPUT_MODES { KEYBOARD_AND_MOUSE, GAMEPAD, TOUCHSCREEN }
+var input_mode = INPUT_MODES.KEYBOARD_AND_MOUSE
 
 @onready var pivot = $Pivot
 
@@ -48,7 +49,20 @@ func get_movement_direction_normalized():
 
 func get_aim_direction_normalized():
 	var global_mouse_position = get_global_mouse_position()
-	var aim_direction: Vector2 = self.global_position.direction_to(global_mouse_position)
-	#aim_direction = Input.get_vector("aim_left", "aim_right", "aim_up", "aim_down")
+	var aim_direction: Vector2
+	
+	if input_mode == INPUT_MODES.KEYBOARD_AND_MOUSE:
+		aim_direction = self.global_position.direction_to(global_mouse_position)
+	elif input_mode == INPUT_MODES.GAMEPAD:
+		aim_direction = Input.get_vector("aim_left", "aim_right", "aim_up", "aim_down")
 	
 	return aim_direction.normalized()
+
+
+func _input(event):
+	if event is InputEventKey or event is InputEventMouseMotion:
+		input_mode = INPUT_MODES.KEYBOARD_AND_MOUSE
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	elif event is InputEventJoypadButton or event is InputEventJoypadMotion:
+		input_mode = INPUT_MODES.GAMEPAD
+		Input.mouse_mode = Input.MOUSE_MODE_HIDDEN

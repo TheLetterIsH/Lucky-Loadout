@@ -2,14 +2,6 @@ extends Node2D
 class_name ProjectileBase
 
 @export_category("Parameters")
-@export var origin_position: Vector2
-@export var destination_position: Vector2
-@export var movement_direction: Vector2
-@export var range: float
-@export var speed: float
-@export var damage: float
-
-@export_group("Mods")
 @export var is_piercing: bool
 @export var piercing_depth: int
 @export var is_chaining: bool
@@ -22,6 +14,13 @@ class_name ProjectileBase
 @export var number_of_projectiles: int
 @export var is_aoe: bool
 @export var aoe_scene: PackedScene
+
+var origin_position: Vector2
+var destination_position: Vector2
+var movement_direction: Vector2
+var range: float
+var speed: float
+var damage: float
 
 
 func _ready():
