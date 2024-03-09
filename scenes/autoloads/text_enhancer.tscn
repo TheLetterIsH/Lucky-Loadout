@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cah25j2g3wlyv"]
+
+[ext_resource type="Script" path="res://scenes/autoloads/text_enhancer.gd" id="1_3nolx"]
+
+[node name="TextEnchancer" type="Node"]
+script = ExtResource("1_3nolx")

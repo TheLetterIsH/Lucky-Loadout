@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://y6cpr3kqtmwv"]
+
+[ext_resource type="Script" path="res://resources/weapon resource/weapon_resource.gd" id="1_3lhfu"]
+
+[resource]
+script = ExtResource("1_3lhfu")
+id = 6
+identifier = "weapon_mno"
+name = "Mnomno Nomnomnom"
+type = ""
+description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+cost = 2
+projectile_rate = 0.0
+projectile_accuracy_variation = 0.0
+projectile_range = 0.0
+projectile_range_variation = 0.0
+projectile_speed = 0.0
+projectile_min_damage = 0.0
+projectile_max_damage = 0.0
+projectile_mode = ""
+projectile_is_multishot = false
+projectile_number_of_shots = 0
+projectile_spread = 0.0
+aoe_range = 0.0

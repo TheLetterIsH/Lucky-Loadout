@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://wrho11xci11r"]
 
-[ext_resource type="Texture2D" uid="uid://dikmqvt1j58fg" path="res://scenes/game objects/projectiles/projectile basic melee/projectile_test_particle.png" id="1_oym0u"]
+[ext_resource type="Texture2D" uid="uid://dikmqvt1j58fg" path="res://scenes/game objects/projectiles/[del] projectile basic melee/projectile_test_particle.png" id="1_oym0u"]
 
 [sub_resource type="Curve" id="Curve_mj6sk"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]

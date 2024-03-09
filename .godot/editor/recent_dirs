@@ -1,14 +1,16 @@
-res://scenes/misc
-res://scenes/game objects/projectiles/projectile basic melee
-res://scenes/game objects/projectiles
+res://scenes/ui
+res://graphics
 res://scenes/autoloads
+res://resources/fonts
+res://resources/effects
+res://resources/themes
+res://scenes/shop
 res://resources/weapons
-res://scenes/game objects/weapons
+res://scenes/misc
+res://scenes/game objects/projectiles
 res://scenes/managers
-res://resources/weapon resources
 res://extras
 res://resources/environment
 res://scenes
-res://resources/effects
 res://scenes/game objects/player
 res://scenes/game

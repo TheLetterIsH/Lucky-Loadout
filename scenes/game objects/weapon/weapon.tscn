@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://pirjhna343g0"]
+
+[ext_resource type="Script" path="res://scenes/game objects/weapon/weapon.gd" id="1_s5mns"]
+
+[node name="Weapon" type="Node2D"]
+script = ExtResource("1_s5mns")
+can_use_primary_action = true
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

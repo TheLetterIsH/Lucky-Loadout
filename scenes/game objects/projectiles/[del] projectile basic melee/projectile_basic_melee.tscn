@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://38iw8viprb6s"]
+
+[ext_resource type="Script" path="res://scenes/game objects/projectiles/[del] projectile basic melee/projectile_basic_melee.gd" id="1_ek7g5"]
+[ext_resource type="PackedScene" uid="uid://wrho11xci11r" path="res://scenes/misc/projectile_test_particles.tscn" id="2_rcha7"]
+[ext_resource type="Texture2D" uid="uid://bc24do40mrp74" path="res://scenes/game objects/projectiles/[del] projectile basic melee/projectile_test.png" id="2_umov1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wdr1w"]
+radius = 9.0
+
+[node name="ProjectileBasicMelee" type="Area2D"]
+collision_layer = 8
+collision_mask = 33
+script = ExtResource("1_ek7g5")
+projectile_test_particles = ExtResource("2_rcha7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_umov1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wdr1w")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

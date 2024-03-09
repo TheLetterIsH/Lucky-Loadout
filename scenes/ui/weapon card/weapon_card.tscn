@@ -1,0 +1,100 @@
+[gd_scene load_steps=5 format=3 uid="uid://i7ncmsg1fjjm"]
+
+[ext_resource type="Script" path="res://scenes/ui/weapon card/weapon_card.gd" id="1_n4u3x"]
+[ext_resource type="Texture2D" uid="uid://w88tyimfg3hx" path="res://graphics/ui_9_slice.png" id="2_x47yn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x0u08"]
+texture = ExtResource("2_x47yn")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 6.0
+modulate_color = Color(0.219608, 0.227451, 0.262745, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_837x1"]
+texture = ExtResource("2_x47yn")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+modulate_color = Color(0.294118, 0.305882, 0.34902, 1)
+
+[node name="WeaponCard" type="PanelContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+offset_right = 232.0
+offset_bottom = 228.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_x0u08")
+script = ExtResource("1_n4u3x")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+clip_contents = true
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 6
+
+[node name="WeaponTitlePanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_837x1")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/WeaponTitlePanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/WeaponTitlePanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -4
+
+[node name="WeaponName" type="RichTextLabel" parent="MarginContainer/VBoxContainer/WeaponTitlePanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(0.956863, 0.956863, 0.956863, 1)
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Weapon[/center]"
+fit_content = true
+
+[node name="WeaponClass" type="RichTextLabel" parent="MarginContainer/VBoxContainer/WeaponTitlePanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(0.721569, 0.729412, 0.760784, 1)
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Weapon Class[/center]"
+fit_content = true
+
+[node name="WeaponDescriptionPanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_837x1")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/WeaponDescriptionPanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="WeaponDescription" type="RichTextLabel" parent="MarginContainer/VBoxContainer/WeaponDescriptionPanelContainer/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci massa, congue ut viverra at.[/center]"
+fit_content = true
+
+[node name="BuyButton" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"ButtonOrange"
+text = "Buy"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BuyButton" to="." method="_on_buy_button_pressed"]

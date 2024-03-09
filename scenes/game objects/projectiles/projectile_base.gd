@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 class_name ProjectileBase
 
 @export_category("Parameters")
@@ -28,4 +28,12 @@ func _ready():
 
 
 func _physics_process(delta):
+	pass
+
+
+func destroy():
+	pass
+
+
+func _on_body_entered(body):
 	pass

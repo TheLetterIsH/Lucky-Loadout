@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://fd1ac06ukn6s" path="res://scenes/game objects/player/player.png" id="1_bpesu"]
 [ext_resource type="Script" path="res://scenes/game objects/player/player.gd" id="1_ixtxv"]
+[ext_resource type="PackedScene" uid="uid://pirjhna343g0" path="res://scenes/game objects/weapon/weapon.tscn" id="2_elfbp"]
 [ext_resource type="Texture2D" uid="uid://chy0531x83fk3" path="res://scenes/game objects/player/aim_indicator.png" id="3_pa1a3"]
-[ext_resource type="PackedScene" uid="uid://pirjhna343g0" path="res://scenes/game objects/weapons/weapon.tscn" id="5_bf72o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w48ig"]
 
@@ -12,7 +12,7 @@ collision_layer = 0
 motion_mode = 1
 script = ExtResource("1_ixtxv")
 
-[node name="Weapon" parent="." groups=["weapon"] instance=ExtResource("5_bf72o")]
+[node name="Weapon" parent="." groups=["weapon"] instance=ExtResource("2_elfbp")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 process_callback = 0

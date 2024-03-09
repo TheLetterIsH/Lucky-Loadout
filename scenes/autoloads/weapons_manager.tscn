@@ -1,0 +1,15 @@
+[gd_scene load_steps=10 format=3 uid="uid://kbwbv5wuncqr"]
+
+[ext_resource type="Script" path="res://scenes/autoloads/weapons_manager.gd" id="1_jq0kd"]
+[ext_resource type="Resource" uid="uid://dvqgjw1h34apt" path="res://resources/weapons/00_weapon_none.tres" id="2_voxew"]
+[ext_resource type="Resource" uid="uid://cl7hcyqkqdpf3" path="res://resources/weapons/01_weapon_sword.tres" id="3_rs722"]
+[ext_resource type="Resource" uid="uid://dvtubvjcoxte" path="res://resources/weapons/02_weapon_abc.tres" id="4_6frlr"]
+[ext_resource type="Resource" uid="uid://bx6owlg0c8w0d" path="res://resources/weapons/03_weapon_def.tres" id="5_8gfk4"]
+[ext_resource type="Resource" uid="uid://dpjx6bjjldsqw" path="res://resources/weapons/04_weapon_ghi.tres" id="6_221dy"]
+[ext_resource type="Resource" uid="uid://dfhtmb8f1m4c4" path="res://resources/weapons/05_weapon_jkl.tres" id="7_gclad"]
+[ext_resource type="Resource" uid="uid://y6cpr3kqtmwv" path="res://resources/weapons/06_weapon_mno.tres" id="8_4e3ar"]
+[ext_resource type="Resource" uid="uid://1ucseddy7unf" path="res://resources/weapons/07_weapon_pqr.tres" id="9_essl0"]
+
+[node name="WeaponsManager" type="Node"]
+script = ExtResource("1_jq0kd")
+all_weapons = Array[Resource]([ExtResource("2_voxew"), ExtResource("3_rs722"), ExtResource("4_6frlr"), ExtResource("5_8gfk4"), ExtResource("6_221dy"), ExtResource("7_gclad"), ExtResource("8_4e3ar"), ExtResource("9_essl0")])

@@ -18,20 +18,29 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*res://scenes/autoloads/game_manager.tscn"
-LoadoutManager="*res://scenes/autoloads/loadout_manager.tscn"
 GameEvents="*res://scenes/autoloads/game_events.tscn"
+WeaponsManager="*res://scenes/autoloads/weapons_manager.tscn"
+TextEnhancer="*res://scenes/autoloads/text_enhancer.tscn"
 
 [display]
 
 window/size/viewport_width=960
 window/size/viewport_height=540
 window/size/mode=3
-window/size/borderless=true
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="res://extras/cursor.png"
 mouse_cursor/custom_image_hotspot=Vector2(64, 64)
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/PaletteTools/plugin.cfg")
+
+[gui]
+
+theme/custom="res://resources/themes/theme.tres"
+theme/custom_font="res://resources/fonts/retro-pixel-thick.ttf"
 
 [input]
 
@@ -108,6 +117,11 @@ aim_right={
 [layer_names]
 
 2d_physics/layer_1="environment"
+2d_physics/layer_2="player_collision"
+2d_physics/layer_3="player_trigger"
+2d_physics/layer_4="projectile"
+2d_physics/layer_5="enemy_collision"
+2d_physics/layer_6="enemy_trigger"
 
 [rendering]
 

@@ -1,3 +1,9 @@
+# Script: GameManager (Autoload)
+# Job:
+# - Handles the overal game logic.
+# - Also handles the scene changing.
+# - Provides functionality to get game objects / containers.
+
 extends Node
 
 var debug_mode: bool = true # When true, allows for various debug functionality. Set to false in actual game.

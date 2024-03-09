@@ -1,0 +1,202 @@
+[gd_scene load_steps=12 format=3 uid="uid://putv0rkm3jbr"]
+
+[ext_resource type="Script" path="res://scenes/shop/shop.gd" id="1_0f65x"]
+[ext_resource type="PackedScene" uid="uid://i7ncmsg1fjjm" path="res://scenes/ui/weapon card/weapon_card.tscn" id="1_ee2ao"]
+[ext_resource type="Shader" path="res://resources/effects/scrolling_background.gdshader" id="2_la6i3"]
+[ext_resource type="Texture2D" uid="uid://pxh0eupdk11y" path="res://graphics/ui_checkerboard_background.png" id="3_f3wbn"]
+[ext_resource type="Shader" path="res://resources/effects/ui_drop_shadow.gdshader" id="4_ermdo"]
+[ext_resource type="Texture2D" uid="uid://w88tyimfg3hx" path="res://graphics/ui_9_slice.png" id="5_n2mxy"]
+[ext_resource type="PackedScene" uid="uid://ntwtsqborp4r" path="res://scenes/ui/loadout item/loadout_item.tscn" id="5_ocpfi"]
+[ext_resource type="Texture2D" uid="uid://bu3ftngh7ha6v" path="res://graphics/options_icon.png" id="6_bw2wc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_668jp"]
+shader = ExtResource("2_la6i3")
+shader_parameter/speed = 0.5
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6d5jd"]
+texture = ExtResource("5_n2mxy")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+modulate_color = Color(0.294118, 0.305882, 0.34902, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_limjs"]
+shader = ExtResource("4_ermdo")
+shader_parameter/background_colors = PackedColorArray(0.313726, 0.32549, 0.364706, 1, 0.294118, 0.305882, 0.34902, 1, 0.294118, 0.305882, 0.34902, 1)
+shader_parameter/shadow_color = Color(0.14902, 0.156863, 0.207843, 1)
+shader_parameter/offset_in_pixels = Vector2(0, 2)
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0f65x")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_668jp")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_f3wbn")
+stretch_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center][wave amp=50.0 freq=5.0]Shop[/wave][/center]"
+fit_content = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 0
+dragger_visibility = 1
+
+[node name="WeaponCardContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/HSplitContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="WeaponCard1" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/HSplitContainer/WeaponCardContainer" instance=ExtResource("1_ee2ao")]
+layout_mode = 2
+
+[node name="WeaponCard2" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/HSplitContainer/WeaponCardContainer" instance=ExtResource("1_ee2ao")]
+layout_mode = 2
+
+[node name="WeaponCard3" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/HSplitContainer/WeaponCardContainer" instance=ExtResource("1_ee2ao")]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/HSplitContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/HSplitContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/HSplitContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/HSplitContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6d5jd")
+
+[node name="StageLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/HSplitContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][wave amp=10 freq=2.5]Stage 
+[font_size=32]7[/font_size][/wave][/center]"
+fit_content = true
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/HSplitContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6d5jd")
+
+[node name="GoldLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/HSplitContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 0.803922, 0.458824, 1)
+bbcode_enabled = true
+text = "[center][wave amp=10 freq=2.5]Gold 
+[font_size=32]12[/font_size][/wave][/center]"
+fit_content = true
+
+[node name="RerollButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/HSplitContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Reroll"
+
+[node name="LockButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/HSplitContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Lock"
+
+[node name="MarginContainer4" type="MarginContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer4/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="HSplitContainer" type="HSplitContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer4/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="LoadoutItemHBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer4/PanelContainer/MarginContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="LoadoutItem1" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer4/PanelContainer/MarginContainer/HSplitContainer/LoadoutItemHBoxContainer" instance=ExtResource("5_ocpfi")]
+layout_mode = 2
+
+[node name="LoadoutItem2" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer4/PanelContainer/MarginContainer/HSplitContainer/LoadoutItemHBoxContainer" instance=ExtResource("5_ocpfi")]
+layout_mode = 2
+
+[node name="LoadoutItem3" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer4/PanelContainer/MarginContainer/HSplitContainer/LoadoutItemHBoxContainer" instance=ExtResource("5_ocpfi")]
+layout_mode = 2
+
+[node name="LoadoutItem4" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer4/PanelContainer/MarginContainer/HSplitContainer/LoadoutItemHBoxContainer" instance=ExtResource("5_ocpfi")]
+layout_mode = 2
+
+[node name="LoadoutItem5" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer4/PanelContainer/MarginContainer/HSplitContainer/LoadoutItemHBoxContainer" instance=ExtResource("5_ocpfi")]
+layout_mode = 2
+
+[node name="LoadoutItem6" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer4/PanelContainer/MarginContainer/HSplitContainer/LoadoutItemHBoxContainer" instance=ExtResource("5_ocpfi")]
+layout_mode = 2
+
+[node name="ButtonHBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer4/PanelContainer/MarginContainer/HSplitContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="OptionsButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer4/PanelContainer/MarginContainer/HSplitContainer/ButtonHBoxContainer"]
+custom_minimum_size = Vector2(62, 62)
+layout_mode = 2
+icon = ExtResource("6_bw2wc")
+icon_alignment = 1
+
+[node name="FightButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer4/PanelContainer/MarginContainer/HSplitContainer/ButtonHBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Fight!"
+
+[node name="ShadowCaster" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="ShadowCaster"]
+material = SubResource("ShaderMaterial_limjs")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

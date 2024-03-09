@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://cl7hcyqkqdpf3"]
+
+[ext_resource type="Script" path="res://resources/weapon resource/weapon_resource.gd" id="1_pde41"]
+
+[resource]
+script = ExtResource("1_pde41")
+id = 1
+identifier = "weapon_sword"
+name = "Sword"
+type = ""
+description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent condimentum viverra mattis."
+cost = 1
+projectile_rate = 0.0
+projectile_accuracy_variation = 0.0
+projectile_range = 0.0
+projectile_range_variation = 0.0
+projectile_speed = 0.0
+projectile_min_damage = 0.0
+projectile_max_damage = 0.0
+projectile_mode = ""
+projectile_is_multishot = false
+projectile_number_of_shots = 0
+projectile_spread = 0.0
+aoe_range = 0.0

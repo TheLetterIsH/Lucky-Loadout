@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://ntwtsqborp4r"]
+
+[ext_resource type="Texture2D" uid="uid://w88tyimfg3hx" path="res://graphics/ui_9_slice.png" id="1_hbfrm"]
+[ext_resource type="Texture2D" uid="uid://bajavwybxl0f7" path="res://graphics/weapons/weapon_none.png" id="2_f58mo"]
+[ext_resource type="Script" path="res://scenes/ui/loadout item/loadout_item.gd" id="2_j5pii"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_226cr"]
+texture = ExtResource("1_hbfrm")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+modulate_color = Color(0.294118, 0.305882, 0.34902, 1)
+
+[node name="LoadoutItem" type="PanelContainer"]
+theme_override_styles/panel = SubResource("StyleBoxTexture_226cr")
+script = ExtResource("2_j5pii")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_f58mo")

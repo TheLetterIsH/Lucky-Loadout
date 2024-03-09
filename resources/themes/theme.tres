@@ -1,0 +1,34 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://makh5hkpsnka"]
+
+[ext_resource type="StyleBox" uid="uid://cln1hymc3qqqp" path="res://graphics/button_9_slice.tres" id="1_b8yxw"]
+[ext_resource type="Texture2D" uid="uid://w88tyimfg3hx" path="res://graphics/ui_9_slice.png" id="1_qv1o6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lm42i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0jrjm"]
+texture = ExtResource("1_qv1o6")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+modulate_color = Color(0.219608, 0.227451, 0.262745, 1)
+
+[resource]
+Button/colors/font_color = Color(0.956863, 0.956863, 0.956863, 1)
+Button/styles/normal = ExtResource("1_b8yxw")
+HBoxContainer/constants/separation = 10
+Label/colors/font_color = Color(0.956863, 0.956863, 0.956863, 1)
+Label/colors/font_outline_color = Color(0.956863, 0.956863, 0.956863, 1)
+Label/colors/font_shadow_color = Color(0.14902, 0.156863, 0.207843, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 16
+Label/styles/normal = SubResource("StyleBoxEmpty_lm42i")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_0jrjm")

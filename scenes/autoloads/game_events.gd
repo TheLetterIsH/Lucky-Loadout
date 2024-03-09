@@ -1,3 +1,8 @@
+# Script: GameEvents (Autoload)
+# Job:
+# - Fires Global level Game Event signals.
+# - Acts as a Signal Bus.
+
 extends Node
 
 signal primary_action_used
