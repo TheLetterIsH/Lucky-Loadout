@@ -42,7 +42,7 @@ func _ready() -> void:
 
 ## We want to size the plugin to look good in both 1080p and 4k
 func iterate_for_control_sizing(node: Node) -> void:
-	##TODO: See if there's anything to do about this if/else abomination
+	## See if there's anything to do about this if/else abomination
 	if node is Window:
 		return
 

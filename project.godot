@@ -20,27 +20,29 @@ config/icon="res://icon.svg"
 GameManager="*res://scenes/autoloads/game_manager.tscn"
 GameEvents="*res://scenes/autoloads/game_events.tscn"
 WeaponsManager="*res://scenes/autoloads/weapons_manager.tscn"
-TextEnhancer="*res://scenes/autoloads/text_enhancer.tscn"
+StageManager="*res://scenes/autoloads/stage_manager.tscn"
 
 [display]
 
 window/size/viewport_width=960
 window/size/viewport_height=540
-window/size/mode=3
-window/size/window_width_override=1920
-window/size/window_height_override=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="res://extras/cursor.png"
 mouse_cursor/custom_image_hotspot=Vector2(64, 64)
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/PaletteTools/plugin.cfg")
+enabled=PackedStringArray("res://addons/PaletteTools/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg")
 
 [gui]
 
 theme/custom="res://resources/themes/theme.tres"
 theme/custom_font="res://resources/fonts/retro-pixel-thick.ttf"
+theme/default_font_antialiasing=0
+theme/default_font_hinting=0
+theme/default_font_subpixel_positioning=0
 
 [input]
 

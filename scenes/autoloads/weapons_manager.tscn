@@ -12,4 +12,5 @@
 
 [node name="WeaponsManager" type="Node"]
 script = ExtResource("1_jq0kd")
-all_weapons = Array[Resource]([ExtResource("2_voxew"), ExtResource("3_rs722"), ExtResource("4_6frlr"), ExtResource("5_8gfk4"), ExtResource("6_221dy"), ExtResource("7_gclad"), ExtResource("8_4e3ar"), ExtResource("9_essl0")])
+all_weapons = Array[Resource("res://resources/weapon resource/weapon_resource.gd")]([ExtResource("2_voxew"), ExtResource("3_rs722"), ExtResource("4_6frlr"), ExtResource("5_8gfk4"), ExtResource("6_221dy"), ExtResource("7_gclad"), ExtResource("8_4e3ar"), ExtResource("9_essl0")])
+default_weapon = ExtResource("2_voxew")

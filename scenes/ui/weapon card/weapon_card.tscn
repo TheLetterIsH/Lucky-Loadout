@@ -21,9 +21,9 @@ modulate_color = Color(0.294118, 0.305882, 0.34902, 1)
 
 [node name="WeaponCard" type="PanelContainer"]
 clip_contents = true
-custom_minimum_size = Vector2(200, 200)
-offset_right = 232.0
-offset_bottom = 228.0
+custom_minimum_size = Vector2(210, 200)
+offset_right = 200.0
+offset_bottom = 226.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_x0u08")
 script = ExtResource("1_n4u3x")
 
@@ -39,7 +39,7 @@ theme_override_constants/margin_bottom = 4
 clip_contents = true
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_constants/separation = 6
+theme_override_constants/separation = 8
 
 [node name="WeaponTitlePanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -66,13 +66,14 @@ fit_content = true
 
 [node name="WeaponClass" type="RichTextLabel" parent="MarginContainer/VBoxContainer/WeaponTitlePanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
-modulate = Color(0.721569, 0.729412, 0.760784, 1)
 layout_mode = 2
+theme_override_colors/default_color = Color(0.721569, 0.729412, 0.760784, 1)
 bbcode_enabled = true
 text = "[center]Weapon Class[/center]"
 fit_content = true
 
 [node name="WeaponDescriptionPanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_837x1")
 
@@ -85,16 +86,14 @@ theme_override_constants/margin_bottom = 2
 
 [node name="WeaponDescription" type="RichTextLabel" parent="MarginContainer/VBoxContainer/WeaponDescriptionPanelContainer/MarginContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 bbcode_enabled = true
-text = "[center]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci massa, congue ut viverra at.[/center]"
+text = "[center]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut placerat enim in malesuada auctor velit.[/center]"
 fit_content = true
 
 [node name="BuyButton" type="Button" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_type_variation = &"ButtonOrange"
 text = "Buy"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/BuyButton" to="." method="_on_buy_button_pressed"]

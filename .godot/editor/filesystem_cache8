@@ -1,9 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1709987903
+::res://::1711111210
+CONTRIBUTING.md::TextFile::-1::1710048622::0::1::::<><>::
 icon.svg::CompressedTexture2D::1066657180085560519::1706938445::1706938450::1::::<><>::
 LICENSE.md::TextFile::-1::1709803651::0::1::::<><>::
 README.md::TextFile::-1::1708537385::0::1::::<><>::
-::res://addons/::1709803651
+READMECN.md::TextFile::-1::1710048622::0::1::::<><>::
+::res://addons/::1710048622
 ::res://addons/PaletteTools/::1709912733
 color_presets.cfg::TextFile::-1::1709912733::0::1::::<><>::
 icon.png::CompressedTexture2D::658607868486051217::1709803652::1709803653::1::::<><>::
@@ -20,9 +22,9 @@ Plus.png::CompressedTexture2D::5453736741752328459::1709803651::1709803652::1:::
 spyglass.png::CompressedTexture2D::1278308900590678775::1709803651::1709803652::1::::<><>::
 unchecked.png::CompressedTexture2D::5825126682855023614::1709803651::1709803652::1::::<><>::
 unchecked_4k.png::CompressedTexture2D::7392501777863685431::1709803651::1709803652::1::::<><>::
-::res://addons/PaletteTools/Resources/::1709987937
+::res://addons/PaletteTools/Resources/::1711083649
 section_label_settings.tres::LabelSettings::9108107433987779056::1709803651::0::1::::<><>::
-section_label_settings_contrast.tres::LabelSettings::767431685617583149::1709987937::0::1::::<><>::
+section_label_settings_contrast.tres::LabelSettings::767431685617583149::1711083649::0::1::::<><>::
 ::res://addons/PaletteTools/Scenes/::1709803651
 browse_palette_preview.tscn::PackedScene::48086548065708961::1709803651::0::1::::<><>::res://addons/PaletteTools/Scripts/browse_palette_preview.gd
 color_sample.tscn::PackedScene::1888808219787418820::1709803651::0::1::::<><>::res://addons/PaletteTools/Scripts/color_sample.gd<>res://addons/PaletteTools/Images/Blank.png
@@ -30,7 +32,7 @@ custom_palette.tscn::PackedScene::6862163884605861296::1709803651::0::1::::<><>:
 custom_picker.tscn::PackedScene::1343901579560345263::1709803651::0::1::::<><>::res://addons/PaletteTools/Scripts/custom_picker.gd
 palette_tools.tscn::PackedScene::1991910966865791276::1709803651::0::1::::<><>::res://addons/PaletteTools/Scripts/palette_tool.gd<>res://addons/PaletteTools/Scripts/get_from_url.gd<>uid://x40sgfxkrskd::::res://addons/PaletteTools/Scenes/plus_box.tscn<>uid://157npdwcov77::::res://addons/PaletteTools/Scenes/color_sample.tscn<>res://addons/PaletteTools/Shaders/rainbow_shader.gdshader<>res://addons/PaletteTools/Images/Plus.png<>res://addons/PaletteTools/Images/spyglass.png<>uid://k60qt3dd7ov2::::res://addons/PaletteTools/Resources/section_label_settings_contrast.tres<>res://addons/PaletteTools/Images/checked_4k.png<>res://addons/PaletteTools/Scripts/browse_popup.gd<>res://addons/PaletteTools/Images/unchecked_4k.png<>res://addons/PaletteTools/Scripts/loading_palettes_screen.gd<>res://addons/PaletteTools/Scripts/alert_popup_panel.gd<>uid://xj8jb4l74mf::::res://addons/PaletteTools/Scenes/browse_palette_preview.tscn
 plus_box.tscn::PackedScene::1675760751575118439::1709803651::0::1::::<><>::res://addons/PaletteTools/Images/Plus.png
-::res://addons/PaletteTools/Scripts/::1709803652
+::res://addons/PaletteTools/Scripts/::1710049057
 alert_popup_panel.gd::GDScript::-1::1709803652::0::1::::<>PopupPanel<>::
 browse_palette_preview.gd::GDScript::-1::1709803652::0::1::::<>Control<>::
 browse_popup.gd::GDScript::-1::1709803652::0::1::::<>Window<>::
@@ -40,42 +42,65 @@ custom_property.gd::GDScript::-1::1709803652::0::1::::<>EditorProperty<>::
 get_from_url.gd::GDScript::-1::1709803652::0::1::::<>HTTPRequest<>::
 loading_palettes_screen.gd::GDScript::-1::1709803652::0::1::::<>ColorRect<>::
 palette_inspector_script.gd::GDScript::-1::1709803652::0::1::::<>EditorInspectorPlugin<>::
-palette_tool.gd::GDScript::-1::1709803652::0::1::::<>Control<>::
+palette_tool.gd::GDScript::-1::1710049057::0::1::::<>Control<>::
 ::res://addons/PaletteTools/Shaders/::1709803652
 rainbow_shader.gdshader::Shader::-1::1709803652::0::1::::<><>::
+::res://addons/Todo_Manager/::1711111210
+ColourPicker.gd::GDScript::-1::1710048622::0::1::::<>HBoxContainer<>::
+Current.gd::GDScript::-1::1710048622::0::1::::<>Panel<>::
+Dock.gd::GDScript::-1::1710048622::0::1::::<>Control<>::
+Pattern.gd::GDScript::-1::1710048622::0::1::::<>HBoxContainer<>::
+plugin.cfg::TextFile::-1::1710048623::0::1::::<><>::
+plugin.gd::GDScript::-1::1710048623::0::1::::<>EditorPlugin<>::
+Project.gd::GDScript::-1::1710048622::0::1::::<>Panel<>::
+todo.cfg::TextFile::-1::1711111210::0::1::::<><>::
+todoItem_class.gd::GDScript::-1::1710048623::0::1::::<>RefCounted<>::
+todo_class.gd::GDScript::-1::1710048623::0::1::::<>RefCounted<>::
+::res://addons/Todo_Manager/doc/::1710048676
+::res://addons/Todo_Manager/doc/images/::1710048624
+example1.png::CompressedTexture2D::8063086250666186557::1710048623::1710048624::1::::<><>::
+example2.png::CompressedTexture2D::1263331298547620617::1710048623::1710048624::1::::<><>::
+Instruct1.png::CompressedTexture2D::4927806250644753666::1710048623::1710048624::1::::<><>::
+Instruct2.png::CompressedTexture2D::3428119869241016516::1710048623::1710048624::1::::<><>::
+Instruct3.png::CompressedTexture2D::1896450602156317146::1710048623::1710048624::1::::<><>::
+Instruct4.png::CompressedTexture2D::433656914951724603::1710048623::1710048624::1::::<><>::
+Instruct5.png::CompressedTexture2D::2008900921350866352::1710048623::1710048624::1::::<><>::
+TODO_Manager_Logo.png::CompressedTexture2D::3128298524482822400::1710048623::1710048623::1::::<><>::
+::res://addons/Todo_Manager/UI/::1710048623
+ColourPicker.tscn::PackedScene::2957809393656723737::1710048622::0::1::::<><>::res://addons/Todo_Manager/ColourPicker.gd
+Dock.tscn::PackedScene::4584442902745049483::1710048623::0::1::::<><>::res://addons/Todo_Manager/Dock.gd<>res://addons/Todo_Manager/Project.gd<>res://addons/Todo_Manager/Current.gd
+Pattern.tscn::PackedScene::4056048923411208166::1710048623::0::1::::<><>::res://addons/Todo_Manager/Pattern.gd
 ::res://extras/::1709980982
 cursor.png::CompressedTexture2D::8497907543991547533::1709980978::1709980982::1::::<><>::
-::res://graphics/::1709990832
+::res://graphics/::1711002976
 button_9_slice.png::CompressedTexture2D::6286094024335880668::1709972565::1709972566::1::::<><>::
-button_9_slice.tres::StyleBoxTexture::5573347979803590383::1709972528::0::1::::<><>::uid://cvtbbx86j2ffw::::res://graphics/button_9_slice.png
+button_9_slice.tres::StyleBoxTexture::5573347979803590383::1711000264::0::1::::<><>::uid://cvtbbx86j2ffw::::res://graphics/button_9_slice.png
 options_icon.png::CompressedTexture2D::3848338341048913099::1709990856::1709990859::1::::<><>::
 ui_9_slice.png::CompressedTexture2D::1614317890237185397::1709966055::1709966057::1::::<><>::
 ui_background.png::CompressedTexture2D::7825483167721755081::1709869921::1709869935::1::::<><>::
 ui_checkerboard_background.png::CompressedTexture2D::1100783248386301524::1709904377::1709904380::1::::<><>::
-::res://graphics/weapons/::1709981764
-weapon_none.png::CompressedTexture2D::2405038777817283606::1709981763::1709981764::1::::<><>::
 ::res://resources/::1709819532
-::res://resources/effects/::1709990668
-drop_shadow.gdshader::Shader::-1::1709990668::0::1::::<><>::
-scrolling_background.gdshader::Shader::-1::1709990668::0::1::::<><>::
-ui_drop_shadow.gdshader::Shader::-1::1709990668::0::1::::<><>::
-::res://resources/environment/::1709987937
+::res://resources/effects/::1711111200
+drop_shadow.gdshader::Shader::-1::1711111200::0::1::::<><>::
+scrolling_background.gdshader::Shader::-1::1711111200::0::1::::<><>::
+ui_drop_shadow.gdshader::Shader::-1::1711111200::0::1::::<><>::
+::res://resources/environment/::1711083649
 arena_tileset.png::CompressedTexture2D::4364398593376855372::1707228079::1707228094::1::::<><>::
-arena_tileset.tres::TileSet::8616353700050589172::1709987937::0::1::::<><>::uid://b3gfaikpkxk4s::::res://resources/environment/arena_tileset.png<>uid://bct5enkist21r::::res://resources/environment/border.png
+arena_tileset.tres::TileSet::8616353700050589172::1711083649::0::1::::<><>::uid://b3gfaikpkxk4s::::res://resources/environment/arena_tileset.png<>uid://bct5enkist21r::::res://resources/environment/border.png
 border.png::CompressedTexture2D::2567850899894827433::1707228898::1707228899::1::::<><>::
-::res://resources/fonts/::1709900444
+::res://resources/fonts/::1710835518
 balatro.otf::FontFile::4028996048378802988::1709900316::1709900316::1::::<><>::
 balatro.ttf::FontFile::2554274488758846560::1709900316::1709900316::1::::<><>::
 m6x11.ttf::FontFile::8566503116003398608::1709900316::1709900316::1::::<><>::
 PixulBrush-Mono.ttf::FontFile::4532106526799716395::1709900316::1709900316::1::::<><>::
 retro-pixel-arcade.ttf::FontFile::7629513637817078686::1709900316::1709900316::1::::<><>::
-retro-pixel-thick.ttf::FontFile::7990677880125936036::1709900316::1709900444::1::::<><>::
-::res://resources/themes/::1709987937
-theme.tres::Theme::842887381130644872::1709987937::0::1::::<><>::uid://cln1hymc3qqqp::::res://graphics/button_9_slice.tres<>uid://w88tyimfg3hx::::res://graphics/ui_9_slice.png
+retro-pixel-thick.ttf::FontFile::7990677880125936036::1709900316::1710835518::1::::<><>::
+::res://resources/themes/::1711083649
+theme.tres::Theme::842887381130644872::1711083649::0::1::::<><>::uid://cln1hymc3qqqp::::res://graphics/button_9_slice.tres<>uid://w88tyimfg3hx::::res://graphics/ui_9_slice.png<>uid://dl30kdupgr6gu::::res://resources/fonts/retro-pixel-thick.ttf
 ::res://resources/weapon resource/::1709176377
 weapon_resource.gd::GDScript::-1::1709176377::0::1::::WeaponResource<>Resource<>::
-::res://resources/weapons/::1709818153
-00_weapon_none.tres::Resource/Resource::8666639381679906201::1709814677::0::1::::<><>::uid://38iw8viprb6s::::res://scenes/game objects/projectiles/[del] projectile basic melee/projectile_basic_melee.tscn<>res://resources/weapon resource/weapon_resource.gd
+::res://resources/weapons/::1711098216
+00_weapon_none.tres::Resource/WeaponResource::8666639381679906201::1711098216::0::1::::<><>::uid://38iw8viprb6s::::res://scenes/game objects/projectiles/[del] projectile basic melee/projectile_basic_melee.tscn<>res://resources/weapon resource/weapon_resource.gd
 01_weapon_sword.tres::Resource/Resource::5611408611824791386::1709814677::0::1::::<><>::res://resources/weapon resource/weapon_resource.gd
 02_weapon_abc.tres::Resource/Resource::255107887866425046::1709818153::0::1::::<><>::res://resources/weapon resource/weapon_resource.gd
 03_weapon_def.tres::Resource/Resource::4065649711273896821::1709818153::0::1::::<><>::res://resources/weapon resource/weapon_resource.gd
@@ -83,24 +108,24 @@ weapon_resource.gd::GDScript::-1::1709176377::0::1::::WeaponResource<>Resource<>
 05_weapon_jkl.tres::Resource/Resource::7525832069701628085::1709818153::0::1::::<><>::res://resources/weapon resource/weapon_resource.gd
 06_weapon_mno.tres::Resource/Resource::1748677115210709769::1709818153::0::1::::<><>::res://resources/weapon resource/weapon_resource.gd
 07_weapon_pqr.tres::Resource/Resource::1866351282843332015::1709818153::0::1::::<><>::res://resources/weapon resource/weapon_resource.gd
-::res://scenes/::1709812194
-::res://scenes/autoloads/::1709990667
-game_events.gd::GDScript::-1::1709814295::0::1::::<>Node<>::
-game_events.tscn::PackedScene::3122155950346098200::1709990667::0::1::::<><>::res://scenes/autoloads/game_events.gd
-game_manager.gd::GDScript::-1::1709818078::0::1::::<>Node<>::
-game_manager.tscn::PackedScene::7167473132343784043::1709990667::0::1::::<><>::res://scenes/autoloads/game_manager.gd
-text_enhancer.gd::GDScript::-1::1709960017::0::1::::<>Node<>::
-text_enhancer.tscn::PackedScene::4788985459017240673::1709981065::0::1::::<><>::res://scenes/autoloads/text_enhancer.gd
-weapons_manager.gd::GDScript::-1::1709818083::0::1::::<>Node<>::
-weapons_manager.tscn::PackedScene::705291524130456097::1709990667::0::1::::<><>::res://scenes/autoloads/weapons_manager.gd<>uid://dvqgjw1h34apt::::res://resources/weapons/00_weapon_none.tres<>uid://cl7hcyqkqdpf3::::res://resources/weapons/01_weapon_sword.tres<>uid://dvtubvjcoxte::::res://resources/weapons/02_weapon_abc.tres<>uid://bx6owlg0c8w0d::::res://resources/weapons/03_weapon_def.tres<>uid://dpjx6bjjldsqw::::res://resources/weapons/04_weapon_ghi.tres<>uid://dfhtmb8f1m4c4::::res://resources/weapons/05_weapon_jkl.tres<>uid://y6cpr3kqtmwv::::res://resources/weapons/06_weapon_mno.tres<>uid://1ucseddy7unf::::res://resources/weapons/07_weapon_pqr.tres
-::res://scenes/game/::1709990667
-game.tscn::PackedScene::6824488108380764193::1709990667::0::1::::<><>::uid://du03c7c0a44wm::::res://resources/environment/arena_tileset.tres<>uid://cism8jn13n1q3::::res://scenes/game objects/player/player.tscn<>res://scenes/misc/fps_label.gd<>res://resources/effects/drop_shadow.gdshader
+::res://scenes/::1711001050
+::res://scenes/autoloads/::1711111022
+game_events.gd::GDScript::-1::1711111019::0::1::::<>Node<>::
+game_events.tscn::PackedScene::3122155950346098200::1711111022::0::1::::<><>::res://scenes/autoloads/game_events.gd
+game_manager.gd::GDScript::-1::1711108468::0::1::::<>Node<>::
+game_manager.tscn::PackedScene::7167473132343784043::1711110712::0::1::::<><>::res://scenes/autoloads/game_manager.gd
+stage_manager.gd::GDScript::-1::1711108638::0::1::::<>Node<>::
+stage_manager.tscn::PackedScene::6945696111327753645::1711108675::0::1::::<><>::res://scenes/autoloads/stage_manager.gd
+weapons_manager.gd::GDScript::-1::1711109854::0::1::::<>Node<>::
+weapons_manager.tscn::PackedScene::705291524130456097::1711110712::0::1::::<><>::res://scenes/autoloads/weapons_manager.gd<>uid://dvqgjw1h34apt::::res://resources/weapons/00_weapon_none.tres<>uid://cl7hcyqkqdpf3::::res://resources/weapons/01_weapon_sword.tres<>uid://dvtubvjcoxte::::res://resources/weapons/02_weapon_abc.tres<>uid://bx6owlg0c8w0d::::res://resources/weapons/03_weapon_def.tres<>uid://dpjx6bjjldsqw::::res://resources/weapons/04_weapon_ghi.tres<>uid://dfhtmb8f1m4c4::::res://resources/weapons/05_weapon_jkl.tres<>uid://y6cpr3kqtmwv::::res://resources/weapons/06_weapon_mno.tres<>uid://1ucseddy7unf::::res://resources/weapons/07_weapon_pqr.tres
+::res://scenes/game/::1711110712
+game.tscn::PackedScene::6824488108380764193::1711110712::0::1::::<><>::uid://du03c7c0a44wm::::res://resources/environment/arena_tileset.tres<>uid://cism8jn13n1q3::::res://scenes/game objects/player/player.tscn<>res://scenes/misc/fps_label.gd<>res://resources/effects/drop_shadow.gdshader
 ::res://scenes/game objects/::1709805446
-::res://scenes/game objects/player/::1709990667
+::res://scenes/game objects/player/::1711110712
 aim_indicator.png::CompressedTexture2D::5315281349495111252::1706966497::1706966499::1::::<><>::
 player.gd::GDScript::-1::1709274150::0::1::::Player<>CharacterBody2D<>::
 player.png::CompressedTexture2D::358716138366714004::1706954319::1706954320::1::::<><>::
-player.tscn::PackedScene::5372298945187485004::1709990667::0::1::::<><>::uid://fd1ac06ukn6s::::res://scenes/game objects/player/player.png<>res://scenes/game objects/player/player.gd<>uid://pirjhna343g0::::res://scenes/game objects/weapon/weapon.tscn<>uid://chy0531x83fk3::::res://scenes/game objects/player/aim_indicator.png
+player.tscn::PackedScene::5372298945187485004::1711110712::0::1::::<><>::uid://fd1ac06ukn6s::::res://scenes/game objects/player/player.png<>res://scenes/game objects/player/player.gd<>uid://pirjhna343g0::::res://scenes/game objects/weapon/weapon.tscn<>uid://chy0531x83fk3::::res://scenes/game objects/player/aim_indicator.png
 ::res://scenes/game objects/projectiles/::1709566631
 projectile_base.gd::GDScript::-1::1709566575::0::1::::ProjectileBase<>Area2D<>::
 projectile_base.tscn::PackedScene::2988643108096650605::1709566577::0::1::::<><>::res://scenes/game objects/projectiles/projectile_base.gd
@@ -112,20 +137,20 @@ projectile_test.png::CompressedTexture2D::2584303501779560257::1709127752::17095
 projectile_test_particle.png::CompressedTexture2D::7742174887876038324::1709127754::1709566623::1::::<><>::
 ::res://scenes/game objects/projectiles/[del] projectile small melee/::1709566631
 projectile_small_melee.png::CompressedTexture2D::4990211361850665479::1708267050::1709566631::1::::<><>::
-::res://scenes/game objects/weapon/::1709990668
-weapon.gd::GDScript::-1::1709818026::0::1::::Weapon<>Node2D<>::
-weapon.tscn::PackedScene::1070396325409636157::1709990668::0::1::::<><>::res://scenes/game objects/weapon/weapon.gd
+::res://scenes/game objects/weapon/::1711110712
+weapon.gd::GDScript::-1::1711109416::0::1::::Weapon<>Node2D<>::
+weapon.tscn::PackedScene::1070396325409636157::1711110712::0::1::::<><>::res://scenes/game objects/weapon/weapon.gd
 ::res://scenes/managers/::1708264374
 ::res://scenes/misc/::1709566623
 fps_label.gd::GDScript::-1::1709126874::0::1::::<>RichTextLabel<>::
 projectile_test_particles.tscn::PackedScene::1579700408739813805::1709566623::0::1::::<><>::uid://dikmqvt1j58fg::::res://scenes/game objects/projectiles/[del] projectile basic melee/projectile_test_particle.png
-::res://scenes/shop/::1709990668
-shop.gd::GDScript::-1::1709980643::0::1::::<>Control<>::
-shop.tscn::PackedScene::1095312674003176823::1709990668::0::1::::<><>::res://scenes/shop/shop.gd<>uid://i7ncmsg1fjjm::::res://scenes/ui/weapon card/weapon_card.tscn<>res://resources/effects/scrolling_background.gdshader<>uid://pxh0eupdk11y::::res://graphics/ui_checkerboard_background.png<>res://resources/effects/ui_drop_shadow.gdshader<>uid://ntwtsqborp4r::::res://scenes/ui/loadout item/loadout_item.tscn<>uid://bu3ftngh7ha6v::::res://graphics/options_icon.png
-::res://scenes/ui/::1709985519
-::res://scenes/ui/loadout item/::1709990668
-loadout_item.gd::GDScript::-1::1709985570::0::1::::<>PanelContainer<>::
-loadout_item.tscn::PackedScene::953048818748615855::1709990668::0::1::::<><>::uid://w88tyimfg3hx::::res://graphics/ui_9_slice.png<>uid://bajavwybxl0f7::::res://graphics/weapons/weapon_none.png<>res://scenes/ui/loadout item/loadout_item.gd
-::res://scenes/ui/weapon card/::1709990668
-weapon_card.gd::GDScript::-1::1709981055::0::1::::WeaponCard<>PanelContainer<>::
-weapon_card.tscn::PackedScene::628364388122191466::1709990668::0::1::::<><>::res://scenes/ui/weapon card/weapon_card.gd<>uid://w88tyimfg3hx::::res://graphics/ui_9_slice.png
+::res://scenes/shop/::1711111198
+shop.gd::GDScript::-1::1711111198::0::1::::<>Control<>::
+shop.tscn::PackedScene::1095312674003176823::1711111198::0::1::::<><>::res://scenes/shop/shop.gd<>uid://i7ncmsg1fjjm::::res://scenes/ui/weapon card/weapon_card.tscn<>res://resources/effects/scrolling_background.gdshader<>uid://pxh0eupdk11y::::res://graphics/ui_checkerboard_background.png<>res://resources/effects/ui_drop_shadow.gdshader<>uid://ntwtsqborp4r::::res://scenes/ui/loadout item/loadout_item.tscn<>uid://w88tyimfg3hx::::res://graphics/ui_9_slice.png<>uid://bu3ftngh7ha6v::::res://graphics/options_icon.png
+::res://scenes/ui/::1710837667
+::res://scenes/ui/loadout item/::1711111186
+loadout_item.gd::GDScript::-1::1711111186::0::1::::LoadoutItem<>MarginContainer<>::
+loadout_item.tscn::PackedScene::953048818748615855::1711111186::0::1::::<><>::res://scenes/ui/loadout item/loadout_item.gd<>uid://w88tyimfg3hx::::res://graphics/ui_9_slice.png
+::res://scenes/ui/weapon card/::1711110713
+weapon_card.gd::GDScript::-1::1711108206::0::1::::WeaponCard<>PanelContainer<>::
+weapon_card.tscn::PackedScene::628364388122191466::1711110713::0::1::::<><>::res://scenes/ui/weapon card/weapon_card.gd<>uid://w88tyimfg3hx::::res://graphics/ui_9_slice.png

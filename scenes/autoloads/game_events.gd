@@ -7,7 +7,8 @@ extends Node
 
 signal primary_action_used
 signal weapon_switched
-
+signal weapon_bought
+signal weapon_sold
 
 func fire_primary_action_used():
 	primary_action_used.emit()
@@ -15,3 +16,11 @@ func fire_primary_action_used():
 
 func fire_weapon_switched():
 	weapon_switched.emit()
+
+
+func fire_weapon_bought(weapon_resource: WeaponResource):
+	weapon_bought.emit(weapon_resource)
+
+
+func fire_weapon_sold(weapon_index: int, weapon_resource: WeaponResource):
+	weapon_sold.emit(weapon_index, weapon_resource)

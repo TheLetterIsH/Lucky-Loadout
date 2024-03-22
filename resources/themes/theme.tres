@@ -1,9 +1,8 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://makh5hkpsnka"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://makh5hkpsnka"]
 
 [ext_resource type="StyleBox" uid="uid://cln1hymc3qqqp" path="res://graphics/button_9_slice.tres" id="1_b8yxw"]
 [ext_resource type="Texture2D" uid="uid://w88tyimfg3hx" path="res://graphics/ui_9_slice.png" id="1_qv1o6"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lm42i"]
+[ext_resource type="FontFile" uid="uid://dl30kdupgr6gu" path="res://resources/fonts/retro-pixel-thick.ttf" id="2_dfype"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0jrjm"]
 texture = ExtResource("1_qv1o6")
@@ -13,22 +12,64 @@ texture_margin_right = 5.0
 texture_margin_bottom = 5.0
 modulate_color = Color(0.219608, 0.227451, 0.262745, 1)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lbfj5"]
+texture = ExtResource("1_qv1o6")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+modulate_color = Color(0.294118, 0.305882, 0.34902, 1)
+
 [resource]
+default_font = ExtResource("2_dfype")
+default_font_size = 16
 Button/colors/font_color = Color(0.956863, 0.956863, 0.956863, 1)
 Button/styles/normal = ExtResource("1_b8yxw")
 HBoxContainer/constants/separation = 10
-Label/colors/font_color = Color(0.956863, 0.956863, 0.956863, 1)
-Label/colors/font_outline_color = Color(0.956863, 0.956863, 0.956863, 1)
-Label/colors/font_shadow_color = Color(0.14902, 0.156863, 0.207843, 0)
-Label/constants/line_spacing = 3
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 1)
+Label/constants/line_spacing = 0
 Label/constants/outline_size = 0
-Label/constants/shadow_offset_x = 1
-Label/constants/shadow_offset_y = 1
-Label/constants/shadow_outline_size = 1
+Label/constants/shadow_offset_x = 0
+Label/constants/shadow_offset_y = 0
+Label/constants/shadow_outline_size = 0
 Label/font_sizes/font_size = 16
-Label/styles/normal = SubResource("StyleBoxEmpty_lm42i")
+Label/fonts/font = ExtResource("2_dfype")
+Label/styles/normal = null
 MarginContainer/constants/margin_bottom = 10
 MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_right = 10
 MarginContainer/constants/margin_top = 10
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_0jrjm")
+RichTextLabel/colors/default_color = Color(0.956863, 0.956863, 0.956863, 1)
+RichTextLabel/colors/font_outline_color = Color(0.219608, 0.227451, 0.262745, 1)
+RichTextLabel/colors/font_selected_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/font_shadow_color = Color(0.827451, 0.321569, 0.407843, 1)
+RichTextLabel/colors/selection_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/table_border = Color(0, 0, 0, 1)
+RichTextLabel/colors/table_even_row_bg = Color(0, 0, 0, 1)
+RichTextLabel/colors/table_odd_row_bg = Color(0, 0, 0, 1)
+RichTextLabel/constants/line_separation = 0
+RichTextLabel/constants/outline_size = 0
+RichTextLabel/constants/shadow_offset_x = 0
+RichTextLabel/constants/shadow_offset_y = 0
+RichTextLabel/constants/shadow_outline_size = 0
+RichTextLabel/constants/table_h_separation = 0
+RichTextLabel/constants/table_v_separation = 0
+RichTextLabel/constants/text_highlight_h_padding = 0
+RichTextLabel/constants/text_highlight_v_padding = 0
+RichTextLabel/font_sizes/bold_font_size = 16
+RichTextLabel/font_sizes/bold_italics_font_size = 16
+RichTextLabel/font_sizes/italics_font_size = 16
+RichTextLabel/font_sizes/mono_font_size = 16
+RichTextLabel/font_sizes/normal_font_size = 16
+RichTextLabel/fonts/bold_font = ExtResource("2_dfype")
+RichTextLabel/fonts/bold_italics_font = ExtResource("2_dfype")
+RichTextLabel/fonts/italics_font = ExtResource("2_dfype")
+RichTextLabel/fonts/mono_font = ExtResource("2_dfype")
+RichTextLabel/fonts/normal_font = ExtResource("2_dfype")
+RichTextLabel/styles/focus = null
+RichTextLabel/styles/normal = null
+TooltipLabel/colors/font_color = Color(0.956863, 0.956863, 0.956863, 1)
+TooltipPanel/styles/panel = SubResource("StyleBoxTexture_lbfj5")

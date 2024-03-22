@@ -17,7 +17,6 @@ var entity_container: Node2D
 
 
 func _ready():
-	print("ready")
 	# Connecting signals
 	GameEvents.primary_action_used.connect(on_primary_action_used)
 	timer.timeout.connect(on_timer_timeout)
@@ -29,7 +28,7 @@ func _ready():
 	# Debug -----------
 	current_weapon = preload("res://resources/weapons/00_weapon_none.tres")
 	# -----------------
-	#current_weapon = WeaponsManager.get_random_weapon_from_loadout() as WeaponResource
+	#current_weapon = WeaponsManager.get_random_weapon_from_loadout+() as WeaponResource
 	intialize_weapon()
 
 

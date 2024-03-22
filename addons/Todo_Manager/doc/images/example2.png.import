@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bajavwybxl0f7"
-path="res://.godot/imported/weapon_none.png-a5a738eacf55c51c8f9e2f1a239ea88d.ctex"
+uid="uid://r8748qw3xcf6"
+path="res://.godot/imported/example2.png-2e3a8f9cd1e178daf22b83dc0513f37a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/weapons/weapon_none.png"
-dest_files=["res://.godot/imported/weapon_none.png-a5a738eacf55c51c8f9e2f1a239ea88d.ctex"]
+source_file="res://addons/Todo_Manager/doc/images/example2.png"
+dest_files=["res://.godot/imported/example2.png-2e3a8f9cd1e178daf22b83dc0513f37a.ctex"]
 
 [params]
 
