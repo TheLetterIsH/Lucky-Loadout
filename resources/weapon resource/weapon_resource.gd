@@ -8,6 +8,7 @@ class_name WeaponResource
 @export_enum("projectile", "aoe", "entity") var type: String
 @export_multiline var description: String
 @export var cost: int
+@export var color: Color
 
 @export_group("Projectile")
 @export var projectile_scene: PackedScene

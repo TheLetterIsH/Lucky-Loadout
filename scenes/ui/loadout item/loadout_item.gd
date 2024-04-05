@@ -20,6 +20,7 @@ func _process(delta):
 
 
 func set_values():
+	weapon_name.modulate = weapon_resource.color
 	weapon_name.append_text("[center][wave amp=10.0 freq=2.5]%s[/wave][/center]" % weapon_resource.name)
 
 

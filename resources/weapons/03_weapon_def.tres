@@ -6,10 +6,11 @@
 script = ExtResource("1_brs1p")
 id = 3
 identifier = "weapon_def"
-name = "Defdef Defdef"
+name = "Book"
 type = ""
 description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci massa, congue ut viverra at."
 cost = 1
+color = Color(0.572549, 0.486275, 0.87451, 1)
 projectile_rate = 0.0
 projectile_accuracy_variation = 0.0
 projectile_range = 0.0

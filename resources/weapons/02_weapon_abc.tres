@@ -6,10 +6,11 @@
 script = ExtResource("1_sj25m")
 id = 2
 identifier = "weapon_abc"
-name = "ABC"
+name = "Wand"
 type = ""
 description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 cost = 1
+color = Color(0.360784, 0.537255, 0.811765, 1)
 projectile_rate = 0.0
 projectile_accuracy_variation = 0.0
 projectile_range = 0.0

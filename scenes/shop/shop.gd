@@ -7,15 +7,16 @@
 extends Control
 
 @export var loadout_item_scene: PackedScene
+@export var reroll_cost: int = 1
+@export var is_shop_locked: bool
 
 @onready var weapon_card_container = %WeaponCardContainer
+@onready var loadout_main_container = %LoadoutMainContainer
 @onready var loadout_items_container = %LoadoutItemsContainer
-@onready var stage_label = %StageLabel
-@onready var gold_label = %GoldLabel
-# To be animated elements
-@onready var menu_bar_container = %MenuBarContainer
-@onready var shop_title_container = %ShopTitleContainer
-@onready var loadout_title_container = %LoadoutTitleContainer
+@onready var stage_value_label = %StageValueLabel
+@onready var gold_value_label = %GoldValueLabel
+@onready var reroll_button = %RerollButton
+@onready var lock_button = %LockButton
 
 
 func _ready():
@@ -26,19 +27,38 @@ func _ready():
 	set_info()
 	set_weapon_cards()
 	set_loadout_items()
-	#animate_elements()
+	animate_weapon_cards()
 
 
 func _process(delta):
-	pass
+	set_info()
 
 
 func set_info():
-	stage_label.clear()
-	stage_label.append_text("[center][wave amp=10 freq=2.5]Stage\n[font_size=32]%d[/font_size][/wave][/center]" % StageManager.stage)
+	stage_value_label.clear()
+	stage_value_label.append_text("[center][wave amp=10 freq=2.5]%d[/wave][/center]" % StageManager.stage)
+	
+	gold_value_label.clear()
+	gold_value_label.append_text("[center][wave amp=10 freq=2.5]%d[/wave][/center]" % GoldManager.gold)
+	
+	if GoldManager.gold < reroll_cost  or is_shop_locked:
+		reroll_button.disabled = true
+	elif !is_shop_locked:
+		reroll_button.disabled = false
+	reroll_button.text = "Reroll: %dG" % reroll_cost
+	
+	if is_shop_locked:
+		lock_button.text = "Unlock"
+	else:
+		lock_button.text = "Lock"
 
 
 func set_weapon_cards():
+	if is_shop_locked:
+		return
+	
+	var tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUINT)
+	
 	var weapon_cards = weapon_card_container.get_children() as Array[WeaponCard]
 	for weapon_card in weapon_cards:
 		var random_weapon = WeaponsManager.get_random_weapon_from_all_weapons() as WeaponResource
@@ -64,28 +84,48 @@ func set_loadout_items():
 		loadout_item_instance.set_values()
 
 
-func animate_elements():
-	var generic_tween = create_tween()
-	generic_tween.set_parallel(true)
-	generic_tween.set_trans(10)
-	generic_tween.set_ease(Tween.EASE_IN_OUT)
-	generic_tween.tween_property(shop_title_container, "position", Vector2(0, 0), 0.35).from(Vector2(0, - 200))
-	generic_tween.tween_property(loadout_title_container, "position", Vector2(0, 0), 0.35).from(Vector2(0, - 200))
-	generic_tween.tween_property(menu_bar_container, "position", Vector2(0, 407), 0.35).from(Vector2(0, 600))
+func reroll_weapons():
+	GoldManager.decrease_gold(reroll_cost)
+	reroll_cost += 1
 	
-	var weapon_card_tween = create_tween()
-	weapon_card_tween.set_parallel(false)
-	weapon_card_tween.set_trans(10)
-	weapon_card_tween.set_ease(Tween.EASE_IN_OUT)
+	set_weapon_cards()
+	animate_weapon_cards()
+
+
+func animate_weapon_cards():
+	var tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUINT)
 	
-	var weapon_cards = weapon_card_container.get_children() as Array[WeaponCard]
-	for weapon_card in weapon_cards:
-		weapon_card_tween.tween_property(weapon_card, "position", Vector2(0, 0), 0.35).from(Vector2(0, - 200))
+	var weapon_cards = weapon_card_container.get_children()
+
+	for i in range(3):
+		var weapon_card = weapon_cards[i] as PanelContainer
+		var y_position = weapon_card.position.y
+		tween.tween_property(weapon_card, "position:y", y_position - 6, 0.125).from(y_position)
+		tween.tween_property(weapon_card, "position:y", y_position + 12, 0.125).from(y_position - 6)
+		tween.tween_property(weapon_card, "position:y", y_position, 0.125).from(y_position + 12)
+
+
+func animate_loadout():
+	var tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUINT)
+	var y_position = loadout_main_container.position.y
+	tween.tween_property(loadout_main_container, "position:y", y_position - 6, 0.125).from(y_position)
+	tween.tween_property(loadout_main_container, "position:y", y_position + 12, 0.125).from(y_position - 6)
+	tween.tween_property(loadout_main_container, "position:y", y_position, 0.125).from(y_position + 12)
 
 
 func on_weapon_bought(weapon_resource):
 	set_loadout_items()
+	animate_loadout()
 
 
 func on_weapon_sold(weapon_index, weapon_resource):
 	set_loadout_items()
+	animate_loadout()
+
+
+func _on_reroll_button_pressed():
+	reroll_weapons()
+
+
+func _on_lock_button_pressed():
+	is_shop_locked = !is_shop_locked

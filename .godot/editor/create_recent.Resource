@@ -1,3 +1,4 @@
+Shader
 Theme
 WeaponResource
 Resource

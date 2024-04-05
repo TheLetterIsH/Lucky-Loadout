@@ -53,6 +53,7 @@ fit_content = true
 unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
+theme_type_variation = &"ButtonHoverRed"
 text = "-"
 
 [connection signal="pressed" from="HBoxContainer/RemoveButton" to="." method="_on_remove_button_pressed"]

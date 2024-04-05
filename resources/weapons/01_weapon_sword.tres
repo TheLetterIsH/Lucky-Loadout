@@ -10,6 +10,7 @@ name = "Sword"
 type = ""
 description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent condimentum viverra mattis."
 cost = 1
+color = Color(0.827451, 0.321569, 0.407843, 1)
 projectile_rate = 0.0
 projectile_accuracy_variation = 0.0
 projectile_range = 0.0

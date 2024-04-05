@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://putv0rkm3jbr"]
+[gd_scene load_steps=13 format=3 uid="uid://putv0rkm3jbr"]
 
 [ext_resource type="Script" path="res://scenes/shop/shop.gd" id="1_0f65x"]
 [ext_resource type="PackedScene" uid="uid://i7ncmsg1fjjm" path="res://scenes/ui/weapon card/weapon_card.tscn" id="1_ee2ao"]
@@ -7,12 +7,21 @@
 [ext_resource type="Shader" path="res://resources/effects/ui_drop_shadow.gdshader" id="4_ermdo"]
 [ext_resource type="PackedScene" uid="uid://ntwtsqborp4r" path="res://scenes/ui/loadout item/loadout_item.tscn" id="5_b752m"]
 [ext_resource type="Texture2D" uid="uid://w88tyimfg3hx" path="res://graphics/ui_9_slice.png" id="5_qf6os"]
+[ext_resource type="Texture2D" uid="uid://bu3ftngh7ha6v" path="res://graphics/options_icon.png" id="6_6j7dj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_668jp"]
 shader = ExtResource("2_la6i3")
 shader_parameter/speed = 0.5
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x3s2v"]
+texture = ExtResource("5_qf6os")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+modulate_color = Color(0.294118, 0.305882, 0.34902, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dukxx"]
 texture = ExtResource("5_qf6os")
 texture_margin_left = 5.0
 texture_margin_top = 5.0
@@ -107,7 +116,6 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="ShopButtonsContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/MainVBoxContainer/HSplitContainer/ShopVBoxContainer"]
-unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 
@@ -123,20 +131,17 @@ theme_override_constants/margin_bottom = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/MainVBoxContainer/HSplitContainer/ShopVBoxContainer/ShopButtonsContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 8
 
 [node name="RerollButton" type="Button" parent="CanvasLayer/MarginContainer/MainVBoxContainer/HSplitContainer/ShopVBoxContainer/ShopButtonsContainer/PanelContainer/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-theme_type_variation = &"ButtonYellow"
 text = "Reroll: 1G"
 
 [node name="LockButton" type="Button" parent="CanvasLayer/MarginContainer/MainVBoxContainer/HSplitContainer/ShopVBoxContainer/ShopButtonsContainer/PanelContainer/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(86, 0)
+custom_minimum_size = Vector2(72, 0)
 layout_mode = 2
-theme_type_variation = &"ButtonOrange"
 text = "Lock"
 
 [node name="LoadoutVBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/MainVBoxContainer/HSplitContainer"]
@@ -189,86 +194,43 @@ theme_override_constants/margin_bottom = 4
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="HelpButton" type="Button" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-theme_type_variation = &"ButtonPurple"
-theme_override_font_sizes/font_size = 48
-text = "?"
-
-[node name="MarginContainer" type="PanelContainer" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="GoldLabelContainer" type="PanelContainer" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_x3s2v")
 
-[node name="GoldLabelContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="GoldTextLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer/MarginContainer/GoldLabelContainer"]
-modulate = Color(1, 0.803922, 0.458824, 1)
-layout_mode = 2
-bbcode_enabled = true
-text = "[center][wave amp=10 freq=2.5]Gold[/wave][/center]"
-fit_content = true
-
-[node name="GoldValueLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer/MarginContainer/GoldLabelContainer"]
+[node name="GoldLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer/GoldLabelContainer"]
 unique_name_in_owner = true
-modulate = Color(0.956863, 0.768627, 0.439216, 1)
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 32
+theme_override_colors/default_color = Color(1, 0.803922, 0.458824, 1)
 bbcode_enabled = true
-text = "[center][wave amp=10 freq=2.5]12[/wave][/center]"
+text = "[center][wave amp=10 freq=2.5]Gold 
+[font_size=32]12[/font_size][/wave][/center]"
 fit_content = true
 
-[node name="MarginContainer2" type="PanelContainer" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="StageLabelContainer" type="PanelContainer" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxTexture_x3s2v")
+theme_override_styles/panel = SubResource("StyleBoxTexture_dukxx")
 
-[node name="StageLabelContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer/MarginContainer2"]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="StageTextLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer/MarginContainer2/StageLabelContainer"]
-modulate = Color(0.956863, 0.956863, 0.956863, 1)
+[node name="StageLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer/StageLabelContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 bbcode_enabled = true
-text = "[center][wave amp=10 freq=2.5]Stage[/wave][/center]"
+text = "[center][wave amp=10 freq=2.5]Stage 
+[font_size=32]7[/font_size][/wave][/center]"
 fit_content = true
 
-[node name="StageValueLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer/MarginContainer2/StageLabelContainer"]
+[node name="OptionsButton" type="Button" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
-modulate = Color(0.956863, 0.956863, 0.956863, 1)
+custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 32
-bbcode_enabled = true
-text = "[center][wave amp=10 freq=2.5]6[/wave][/center]"
-fit_content = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 8
-alignment = 1
-
-[node name="OptionsButton" type="Button" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(120, 0)
-layout_mode = 2
-theme_type_variation = &"ButtonBlue"
-text = "Options"
-
-[node name="MainMenuButton" type="Button" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(120, 0)
-layout_mode = 2
-theme_type_variation = &"ButtonBlue"
-text = "Main Menu"
+icon = ExtResource("6_6j7dj")
+icon_alignment = 1
 
 [node name="PlayButton" type="Button" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-theme_type_variation = &"ButtonGreen"
 theme_override_font_sizes/font_size = 32
 text = "Fight!"
 

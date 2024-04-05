@@ -8,7 +8,7 @@ texture = ExtResource("2_x47yn")
 texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
-texture_margin_bottom = 6.0
+texture_margin_bottom = 5.0
 modulate_color = Color(0.219608, 0.227451, 0.262745, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_837x1"]
@@ -21,7 +21,7 @@ modulate_color = Color(0.294118, 0.305882, 0.34902, 1)
 
 [node name="WeaponCard" type="PanelContainer"]
 clip_contents = true
-custom_minimum_size = Vector2(210, 200)
+custom_minimum_size = Vector2(210, 235)
 offset_right = 200.0
 offset_bottom = 226.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_x0u08")
@@ -35,28 +35,29 @@ theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="InfoContainer" type="VBoxContainer" parent="MarginContainer"]
+unique_name_in_owner = true
 clip_contents = true
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 8
 
-[node name="WeaponTitlePanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+[node name="WeaponTitlePanelContainer" type="PanelContainer" parent="MarginContainer/InfoContainer"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_837x1")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/WeaponTitlePanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/InfoContainer/WeaponTitlePanelContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 2
 theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 2
 theme_override_constants/margin_bottom = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/WeaponTitlePanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/InfoContainer/WeaponTitlePanelContainer/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = -4
 
-[node name="WeaponName" type="RichTextLabel" parent="MarginContainer/VBoxContainer/WeaponTitlePanelContainer/MarginContainer/VBoxContainer"]
+[node name="WeaponName" type="RichTextLabel" parent="MarginContainer/InfoContainer/WeaponTitlePanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 modulate = Color(0.956863, 0.956863, 0.956863, 1)
 layout_mode = 2
@@ -64,7 +65,7 @@ bbcode_enabled = true
 text = "[center]Weapon[/center]"
 fit_content = true
 
-[node name="WeaponClass" type="RichTextLabel" parent="MarginContainer/VBoxContainer/WeaponTitlePanelContainer/MarginContainer/VBoxContainer"]
+[node name="WeaponClass" type="RichTextLabel" parent="MarginContainer/InfoContainer/WeaponTitlePanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/default_color = Color(0.721569, 0.729412, 0.760784, 1)
@@ -72,28 +73,51 @@ bbcode_enabled = true
 text = "[center]Weapon Class[/center]"
 fit_content = true
 
-[node name="WeaponDescriptionPanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+[node name="WeaponDescriptionPanelContainer" type="PanelContainer" parent="MarginContainer/InfoContainer"]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_837x1")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/WeaponDescriptionPanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/InfoContainer/WeaponDescriptionPanelContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 2
 theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 2
 theme_override_constants/margin_bottom = 2
 
-[node name="WeaponDescription" type="RichTextLabel" parent="MarginContainer/VBoxContainer/WeaponDescriptionPanelContainer/MarginContainer"]
+[node name="WeaponDescription" type="RichTextLabel" parent="MarginContainer/InfoContainer/WeaponDescriptionPanelContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 bbcode_enabled = true
 text = "[center]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut placerat enim in malesuada auctor velit.[/center]"
 fit_content = true
 
-[node name="BuyButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="BuyButton" type="Button" parent="MarginContainer/InfoContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_type_variation = &"ButtonHoverYellow"
 text = "Buy"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/BuyButton" to="." method="_on_buy_button_pressed"]
+[node name="SoldContainer" type="PanelContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_837x1")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/SoldContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="SoldLabel" type="RichTextLabel" parent="MarginContainer/SoldContainer/MarginContainer"]
+modulate = Color(0.721569, 0.729412, 0.760784, 1)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[center][wave amp=20.0 freq=6]Sold![/wave][/center]"
+fit_content = true
+
+[connection signal="pressed" from="MarginContainer/InfoContainer/BuyButton" to="." method="_on_buy_button_pressed"]

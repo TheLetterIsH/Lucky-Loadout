@@ -6,10 +6,11 @@
 script = ExtResource("1_qqgpq")
 id = 5
 identifier = "weapon_jkl"
-name = "Jkljkl Jkl"
+name = "Critter"
 type = ""
 description = "Lorem ipsum dolor sit amet. Aliquam orci massa, congue ut viverra at."
 cost = 1
+color = Color(0.894118, 0.501961, 0.372549, 1)
 projectile_rate = 0.0
 projectile_accuracy_variation = 0.0
 projectile_range = 0.0

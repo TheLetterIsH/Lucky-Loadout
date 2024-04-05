@@ -6,10 +6,11 @@
 script = ExtResource("1_3lhfu")
 id = 6
 identifier = "weapon_mno"
-name = "Mnomno Nomnomnom"
+name = "Demon Orbs"
 type = ""
 description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 cost = 2
+color = Color(0.360784, 0.745098, 0.513726, 1)
 projectile_rate = 0.0
 projectile_accuracy_variation = 0.0
 projectile_range = 0.0

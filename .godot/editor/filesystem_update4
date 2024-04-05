@@ -1,19 +1,18 @@
-res://scenes/ui/loadout item/loadout_item.tscn
+res://scenes/autoloads/game_manager.tscn
 res://resources/themes/theme.tres
 res://addons/PaletteTools/Resources/section_label_settings_contrast.tres
 res://resources/environment/arena_tileset.tres
 res://resources/effects/drop_shadow.gdshader
 res://resources/effects/scrolling_background.gdshader
 res://resources/effects/ui_drop_shadow.gdshader
-res://scenes/ui/loadout item/loadout_item.gd
-res://scenes/shop/shop.gd
+res://resources/effects/old_drop_shadow_shader.gdshader
 res://scenes/autoloads/game_events.tscn
-res://scenes/autoloads/game_events.gd
-res://scenes/autoloads/weapons_manager.tscn
-res://scenes/autoloads/weapons_manager.gd
-res://scenes/autoloads/game_manager.tscn
 res://scenes/game/game.tscn
 res://scenes/game objects/player/player.tscn
 res://scenes/game objects/weapon/weapon.tscn
+res://scenes/autoloads/weapons_manager.tscn
 res://scenes/shop/shop.tscn
 res://scenes/ui/weapon card/weapon_card.tscn
+res://scenes/ui/loadout item/loadout_item.tscn
+res://scenes/autoloads/gold_manager.tscn
+res://scenes/shop/shop.gd
