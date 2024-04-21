@@ -11,14 +11,16 @@ config_version=5
 [application]
 
 config/name="Lucky Loadout"
-run/main_scene="res://scenes/game/game.tscn"
+run/main_scene="res://scenes/main menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
+SceneManager="*res://addons/scene_manager/SceneManager.tscn"
 GameManager="*res://scenes/autoloads/game_manager.tscn"
 GameEvents="*res://scenes/autoloads/game_events.tscn"
+SaveSystem="*res://addons/save_system/save_system.gd"
 WeaponsManager="*res://scenes/autoloads/weapons_manager.tscn"
 StageManager="*res://scenes/autoloads/stage_manager.tscn"
 GoldManager="*res://scenes/autoloads/gold_manager.tscn"
@@ -36,7 +38,7 @@ mouse_cursor/custom_image_hotspot=Vector2(64, 64)
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/PaletteTools/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/PaletteTools/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg", "res://addons/save_system/plugin.cfg", "res://addons/scene_manager/plugin.cfg")
 
 [gui]
 

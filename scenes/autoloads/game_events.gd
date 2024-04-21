@@ -5,10 +5,16 @@
 
 extends Node
 
+signal save_data_deleted
 signal primary_action_used
 signal weapon_switched
 signal weapon_bought
 signal weapon_sold
+
+
+func fire_save_data_deleted():
+	save_data_deleted.emit()
+
 
 func fire_primary_action_used():
 	primary_action_used.emit()

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpvcn4ycqmblr"]
+
+[ext_resource type="Script" path="res://addons/save_system/save_system.gd" id="1_jgfri"]
+
+[node name="SaveSystem" type="Node" groups=["scene_manager_entity_nodes"]]
+script = ExtResource("1_jgfri")
+current_state_dictionary = {
+"current_loadout_paths": [],
+"gold": 5.0
+}
+metadata/entity_name = "SaveSystem"

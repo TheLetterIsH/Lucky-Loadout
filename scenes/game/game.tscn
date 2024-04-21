@@ -36,6 +36,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="UI" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="FPSLabel" type="RichTextLabel" parent="UI"]
 offset_right = 122.0

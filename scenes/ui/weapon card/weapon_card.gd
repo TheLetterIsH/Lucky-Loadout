@@ -3,6 +3,8 @@ class_name WeaponCard
 
 @export var weapon_resource: WeaponResource
 
+var tween_hover
+
 @onready var weapon_name = %WeaponName
 @onready var weapon_class = %WeaponClass
 @onready var weapon_description = %WeaponDescription

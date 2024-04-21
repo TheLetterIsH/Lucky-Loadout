@@ -94,9 +94,33 @@ fit_content = true
 
 [node name="BuyButton" type="Button" parent="MarginContainer/InfoContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(94, 0)
 layout_mode = 2
-theme_type_variation = &"ButtonHoverYellow"
+theme_type_variation = &"ButtonYellow"
 text = "Buy"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/InfoContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="WeaponCostPanelContainer" type="PanelContainer" parent="MarginContainer/InfoContainer/HBoxContainer"]
+custom_minimum_size = Vector2(94, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_837x1")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/InfoContainer/HBoxContainer/WeaponCostPanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/InfoContainer/HBoxContainer/WeaponCostPanelContainer/MarginContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]10G[/center]"
 
 [node name="SoldContainer" type="PanelContainer" parent="MarginContainer"]
 unique_name_in_owner = true
@@ -120,4 +144,6 @@ bbcode_enabled = true
 text = "[center][wave amp=20.0 freq=6]Sold![/wave][/center]"
 fit_content = true
 
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="MarginContainer/InfoContainer/BuyButton" to="." method="_on_buy_button_pressed"]

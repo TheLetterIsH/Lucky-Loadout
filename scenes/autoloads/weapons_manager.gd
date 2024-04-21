@@ -8,28 +8,60 @@ extends Node
 @export var all_weapons: Array[WeaponResource]
 @export var current_loadout: Array[WeaponResource]
 @export var default_weapon: WeaponResource
+@export var current_loadout_paths: Array[String]
 
 
 func _ready():
 	# Connecting signals
+	GameEvents.save_data_deleted.connect(on_save_data_deleted)
 	GameEvents.weapon_bought.connect(on_weapon_bought)
 	GameEvents.weapon_sold.connect(on_weapon_sold)
 	
-	# TODO If save exists then get current loadout from save 
+	# If save exists then get current loadout from save 
 	# else have a single default weapon -- weapon wooden stick
-	current_loadout.append(default_weapon)
+	if (SaveSystem.has("current_loadout_paths")):
+		current_loadout_paths.assign(SaveSystem.get_var("current_loadout_paths"))
+		set_loadout_from_save()
+	else:
+		current_loadout.assign([default_weapon])
+		save_loadout()
 
 
 func _process(delta):
 	pass
 
 
+func save_loadout():
+	current_loadout_paths.clear()
+	
+	for weapon in current_loadout:
+		current_loadout_paths.append(weapon.resource_path)
+	
+	SaveSystem.set_var("current_loadout_paths", current_loadout_paths)
+	SaveSystem.save()
+
+
+func set_loadout_from_save():
+	current_loadout.clear()
+	
+	for path in current_loadout_paths:
+		var resource = load(path)
+		current_loadout.append(resource)
+
+
 func on_weapon_bought(weapon_resource):
 	current_loadout.append(weapon_resource)
+	save_loadout()
 
 
 func on_weapon_sold(weapon_index, weapon_resource):
 	current_loadout.remove_at(weapon_index)
+	save_loadout()
+
+
+func on_save_data_deleted():
+	current_loadout.assign([default_weapon])
+	save_loadout()
 
 
 func get_loadout():

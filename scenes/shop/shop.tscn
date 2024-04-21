@@ -189,10 +189,29 @@ theme_override_constants/margin_bottom = 4
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
 
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="OptionsButton" type="Button" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_type_variation = &"ButtonBlue"
+text = "Options"
+
+[node name="MainMenuButton" type="Button" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_type_variation = &"ButtonBlue"
+text = "Main Menu"
+
 [node name="HelpButton" type="Button" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
-theme_type_variation = &"ButtonPurple"
+theme_type_variation = &"ButtonBlue"
 theme_override_font_sizes/font_size = 48
 text = "?"
 
@@ -246,26 +265,8 @@ bbcode_enabled = true
 text = "[center][wave amp=10 freq=2.5]6[/wave][/center]"
 fit_content = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 8
-alignment = 1
-
-[node name="OptionsButton" type="Button" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="FightButton" type="Button" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(120, 0)
-layout_mode = 2
-theme_type_variation = &"ButtonBlue"
-text = "Options"
-
-[node name="MainMenuButton" type="Button" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(120, 0)
-layout_mode = 2
-theme_type_variation = &"ButtonBlue"
-text = "Main Menu"
-
-[node name="PlayButton" type="Button" parent="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme_type_variation = &"ButtonGreen"
@@ -285,3 +286,4 @@ mouse_filter = 2
 
 [connection signal="pressed" from="CanvasLayer/MarginContainer/MainVBoxContainer/HSplitContainer/ShopVBoxContainer/ShopButtonsContainer/PanelContainer/MarginContainer/HBoxContainer/RerollButton" to="." method="_on_reroll_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/MainVBoxContainer/HSplitContainer/ShopVBoxContainer/ShopButtonsContainer/PanelContainer/MarginContainer/HBoxContainer/LockButton" to="." method="_on_lock_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/MainVBoxContainer/MenuBarContainer/PanelContainer/MarginContainer/HBoxContainer/FightButton" to="." method="_on_fight_button_pressed"]

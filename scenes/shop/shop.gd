@@ -10,6 +10,8 @@ extends Control
 @export var reroll_cost: int = 1
 @export var is_shop_locked: bool
 
+var game_scene_path = "res://scenes/game/game.tscn"
+
 @onready var weapon_card_container = %WeaponCardContainer
 @onready var loadout_main_container = %LoadoutMainContainer
 @onready var loadout_items_container = %LoadoutItemsContainer
@@ -17,6 +19,7 @@ extends Control
 @onready var gold_value_label = %GoldValueLabel
 @onready var reroll_button = %RerollButton
 @onready var lock_button = %LockButton
+@onready var fight_button = %FightButton
 
 
 func _ready():
@@ -27,7 +30,7 @@ func _ready():
 	set_info()
 	set_weapon_cards()
 	set_loadout_items()
-	animate_weapon_cards()
+	#animate_weapon_cards()
 
 
 func _process(delta):
@@ -129,3 +132,11 @@ func _on_reroll_button_pressed():
 
 func _on_lock_button_pressed():
 	is_shop_locked = !is_shop_locked
+
+
+func _on_fight_button_pressed():
+	SceneManager.change_scene(game_scene_path,
+		{ "color" : Color("#f4f4f4"),
+		  "pattern_enter" : "circle",
+		  "pattern_leave" : "squares",
+		})

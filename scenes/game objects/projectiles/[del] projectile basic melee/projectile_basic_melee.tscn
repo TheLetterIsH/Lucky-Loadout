@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/game objects/projectiles/[del] projectile basic melee/projectile_basic_melee.gd" id="1_ek7g5"]
 [ext_resource type="PackedScene" uid="uid://wrho11xci11r" path="res://scenes/misc/projectile_test_particles.tscn" id="2_rcha7"]
-[ext_resource type="Texture2D" uid="uid://bhhajauh030sd" path="res://scenes/game objects/projectiles/[del] projectile basic melee/projectile_test_2.png" id="3_br4c2"]
+[ext_resource type="Texture2D" uid="uid://bc24do40mrp74" path="res://scenes/game objects/projectiles/[del] projectile basic melee/projectile_test.png" id="3_mdc3o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wdr1w"]
 radius = 9.0
@@ -14,7 +14,7 @@ script = ExtResource("1_ek7g5")
 projectile_test_particles = ExtResource("2_rcha7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("3_br4c2")
+texture = ExtResource("3_mdc3o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_wdr1w")

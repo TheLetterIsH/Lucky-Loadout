@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=3 uid="uid://dopt5s7hqqihu"]
+
+[ext_resource type="Script" path="res://scenes/main menu/main_menu.gd" id="1_ekv6v"]
+[ext_resource type="Shader" path="res://resources/effects/scrolling_background.gdshader" id="2_1iv8x"]
+[ext_resource type="Texture2D" uid="uid://pxh0eupdk11y" path="res://graphics/ui_checkerboard_background.png" id="3_15liu"]
+[ext_resource type="Shader" path="res://resources/effects/ui_drop_shadow.gdshader" id="4_ivoy0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_068a5"]
+shader = ExtResource("2_1iv8x")
+shader_parameter/speed = 0.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1cicm"]
+shader = ExtResource("4_ivoy0")
+shader_parameter/background_colors = PackedColorArray(0.313726, 0.32549, 0.364706, 1, 0.294118, 0.305882, 0.34902, 1, 0.294118, 0.305882, 0.34902, 1)
+shader_parameter/shadow_color = Color(0.14902, 0.156863, 0.207843, 1)
+shader_parameter/offset_in_pixels = Vector2(0, 2)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ekv6v")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_068a5")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_15liu")
+stretch_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 8
+
+[node name="PlayButton" type="Button" parent="CanvasLayer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(140, 70)
+layout_mode = 2
+theme_type_variation = &"ButtonGreen"
+theme_override_font_sizes/font_size = 32
+text = "Play"
+
+[node name="ResetButton" type="Button" parent="CanvasLayer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+theme_type_variation = &"ButtonPurple"
+text = "Reset"
+
+[node name="ShadowCaster" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="ShadowCaster"]
+material = SubResource("ShaderMaterial_1cicm")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]
